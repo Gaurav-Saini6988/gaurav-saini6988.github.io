@@ -54,6 +54,7 @@ header {
   font-weight: bold;
   border-radius: 4px;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .nav a:hover {
@@ -129,7 +130,7 @@ header {
   line-height: 1.6;
 }
 
-/* ================= PRACTICE SLIDE ================= */
+/* ================= PRACTICE TOGGLE ================= */
 .toggle-btn-box {
   text-align: center;
   margin-bottom: 25px;
@@ -186,7 +187,7 @@ footer {
     <div class="nav">
       <a href="#about">About Us</a>
       <a href="#why-choose-us">Why Choose Us</a>
-      <a href="#practice">Practice Areas</a>
+      <a href="#practice" onclick="openPractice()">Practice Areas</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
@@ -198,29 +199,26 @@ footer {
   <p>Professional legal services with integrity, clarity, and commitment.</p>
 </section>
 
-<!-- ================= ABOUT US ================= -->
 <section class="section" id="about">
   <h2>About Us</h2>
-  <p><strong>Gaurav Saini &amp; Associates</strong> is a full-service law firm committed to providing ethical, result-oriented, and client-focused legal services.</p>
-  <p>Led by <strong>Gaurav Saini, Advocate &amp; Legal Consultant</strong>, the firm advises clients across civil, criminal, labour, employment and advisory matters.</p>
-  <p>Client confidence, transparency and ethical representation form the foundation of our practice.</p>
+  <p><strong>Gaurav Saini & Associates</strong> is a full-service law firm committed to ethical and client-focused legal services.</p>
+  <p>Led by <strong>Gaurav Saini, Advocate & Legal Consultant</strong>, the firm handles civil, criminal, labour and advisory matters.</p>
+  <p>Transparency, professionalism and client confidence are the foundation of our practice.</p>
 </section>
 
-<!-- ================= WHY CHOOSE US ================= -->
 <section class="section services" id="why-choose-us">
   <h2>Why Choose Us</h2>
-  <p>At <strong>Gaurav Saini &amp; Associates</strong>, we understand that legal matters require clarity, dedication, and trust.</p>
+  <p>We believe legal matters require trust, clarity and dedication.</p>
   <div class="service-grid">
     <div class="card">Ethical & Transparent Practice</div>
     <div class="card">Client-Centric Approach</div>
-    <div class="card">Strong Legal Research & Strategy</div>
+    <div class="card">Strong Legal Research</div>
     <div class="card">Wide Practice Experience</div>
-    <div class="card">Timely & Practical Advice</div>
+    <div class="card">Timely Legal Advice</div>
     <div class="card">Professional Representation</div>
   </div>
 </section>
 
-<!-- ================= PRACTICE AREAS (BUTTON ONLY) ================= -->
 <section class="section services" id="practice">
   <h2>Practice Areas</h2>
 
@@ -256,6 +254,16 @@ function togglePractice() {
     content.classList.remove("open");
     button.innerText = "View Practice Areas";
   } else {
+    content.classList.add("open");
+    button.innerText = "Hide Practice Areas";
+  }
+}
+
+function openPractice() {
+  const content = document.getElementById("practice-content");
+  const button = document.querySelector(".toggle-btn");
+
+  if (!content.classList.contains("open")) {
     content.classList.add("open");
     button.innerText = "Hide Practice Areas";
   }
