@@ -27,10 +27,33 @@
 html { scroll-behavior: smooth; }
 body { margin:0;font-family:Arial;background:#fff;color:#1f2937; }
 h1,h2,h3,p{margin:0 0 10px;}
-header{background:#0f2a44;padding:12px 24px;display:flex;align-items:center;}
+header{
+  background:#0f2a44;
+  padding:12px 24px;
+  display:flex;
+  align-items:center;
+  position:relative;
+}
 .logo{max-width:360px;}
 .header-center{flex:1;text-align:center;}
 .gold-text{color:#c9a24d;font-weight:bold;}
+
+.header-contact{
+  position:absolute;
+  right:24px;
+  top:14px;
+  font-size:13px;
+  font-weight:bold;
+  white-space:nowrap;
+}
+.header-contact a{
+  color:#c9a24d;
+  text-decoration:none;
+}
+.header-contact a:hover{
+  text-decoration:underline;
+}
+
 .nav a{margin:6px;padding:8px 14px;border:1px solid #c9a24d;color:#c9a24d;font-size:14px;font-weight:bold;border-radius:4px;text-decoration:none;}
 .nav a:hover{background:#c9a24d;color:#0f2a44;}
 .hero{text-align:center;padding:30px 20px;}
@@ -40,18 +63,10 @@ header{background:#0f2a44;padding:12px 24px;display:flex;align-items:center;}
 .section{text-align:center;padding:35px 20px;}
 .section h2{color:#0f2a44;}
 .section p{max-width:900px;margin:auto;line-height:1.6;}
-.download-btn{
-  display:inline-block;
-  margin-top:18px;
-  padding:12px 22px;
-  background:#c9a24d;
-  color:#0f2a44;
-  font-weight:bold;
-  border-radius:6px;
-  text-decoration:none;
-  transition:.3s;
-}
-.download-btn:hover{background:#b8943c;}
+input,textarea{width:100%;padding:10px;margin:6px 0;border:1px solid #ccc;border-radius:4px;}
+button{background:#c9a24d;color:#0f2a44;padding:12px 18px;border:none;border-radius:4px;font-weight:bold;cursor:pointer;}
+button:hover{background:#b8943c;}
+.form-box{max-width:600px;margin:20px auto;}
 .services{background:#f3f4f6;}
 .service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;max-width:1000px;margin:20px auto;}
 .card{background:#fff;padding:20px;border-top:4px solid #c9a24d;border-radius:6px;font-weight:bold;}
@@ -67,6 +82,12 @@ footer{background:#0f2a44;color:#fff;text-align:center;padding:15px;}
 
 <header>
 <img src="/images/logo.png" class="logo">
+
+<div class="header-contact">
+  <a href="tel:+919811273738">T: +91 9811273738</a> |
+  <a href="mailto:gaurav@sainilegal.in">E: gaurav@sainilegal.in</a>
+</div>
+
 <div class="header-center">
 <h2 class="gold-text">Gaurav Saini</h2>
 <p class="gold-text">Advocate & Legal Consultant</p>
@@ -74,8 +95,9 @@ footer{background:#0f2a44;color:#fff;text-align:center;padding:15px;}
 <a href="#about">About</a>
 <a href="#profile">Profile</a>
 <a href="#why" onclick="toggle('why')">Why Choose Us</a>
-<a href="#practice" onclick="toggle('practice')">Practice</a>
-<a href="#contact">Contact</a>
+<a href="#practice" onclick="toggle('practice')">Practice Areas</a>
+<a href="#careers" onclick="toggle('careers')">Careers</a>
+<a href="#contact">Contact Us</a>
 </div>
 </div>
 </header>
@@ -85,78 +107,25 @@ footer{background:#0f2a44;color:#fff;text-align:center;padding:15px;}
 <img src="/images/gaurav-compressed.jpg" class="profile-pic">
 </div>
 <h1>Protecting Your Rights. Advancing Your Interests.</h1>
-<p style="font-weight:600;margin-top:6px;">Gaurav Saini, Advocate &amp; Legal Consultant</p>
-<div class="badge-line">Advocate • Legal Consultant • Strategic Advisor</div>
+<p>Gaurav Saini, Advocate & Legal Consultant</p>
 </section>
 
-<section class="section" id="about">
-<h2>About Us</h2>
-<p><strong>Gaurav Saini & Associates</strong> is a full-service law firm providing high-quality legal services with a strong focus on integrity, efficiency and client success.</p>
-</section>
-
-<section class="section" id="profile">
-<h2>Gaurav Saini – Advocate &amp; Legal Consultant</h2>
-<p>Gaurav Saini is an Advocate and Legal Consultant based in New Delhi, advising individuals, businesses, and international clients on a wide range of legal matters. He is known for his strategic, detail-driven and client-focused approach to legal practice.</p>
-<p>With experience across civil, criminal, labour, and advisory matters, Gaurav provides practical and commercially sound legal solutions rather than just theoretical advice. His work includes drafting and vetting contracts, legal opinions, compliance support, dispute resolution, and court representation.</p>
-<p>He regularly assists foreign law firms, overseas clients, and corporate entities in understanding and navigating Indian laws, regulations, and procedural requirements. His ability to translate complex Indian legal issues into clear, actionable guidance makes him a reliable legal partner for cross-border matters.</p>
-<p>Gaurav believes that effective legal service is built on transparency, communication, and precision. Every client receives personal attention, timely updates, and well-researched legal strategy aimed at protecting their rights and advancing their interests.</p>
-<a href="/gaurav-saini-profile.pdf" class="download-btn" target="_blank">Download Profile (PDF)</a>
-</section>
-
-<section class="section services slide" id="why">
-<h2>Why Choose Us</h2>
-<p>
-At <strong>Gaurav Saini & Associates</strong>, we deliver strategic, business-oriented legal solutions designed to meet both domestic and international standards.
-Our clients benefit from precise legal analysis, commercially sound advice and discreet, responsive representation.
-We are committed to protecting your interests with professionalism, clarity and global best practices.
-</p>
-
-<div class="service-grid">
-<div class="card">International-Standard Legal Services</div>
-<div class="card">Client-Focused Strategy</div>
-<div class="card">Strong Legal Research</div>
-<div class="card">Commercially Practical Advice</div>
-<div class="card">Fast & Reliable Communication</div>
-<div class="card">Ethical Professional Practice</div>
-</div>
-</section>
-
-<section class="section services slide" id="practice">
-<h2>Practice Areas</h2>
-<div class="service-grid">
-<div class="card">Civil & Commercial Litigation</div>
-<div class="card">Criminal Defence & White-Collar Crime</div>
-<div class="card">Labour & Employment Law</div>
-<div class="card">Contract Drafting & Vetting</div>
-<div class="card">Corporate & Business Advisory</div>
-<div class="card">Intellectual Property (IPR)</div>
-<div class="card">Legal Due Diligence</div>
-<div class="card">Arbitration & Dispute Resolution</div>
-<div class="card">Regulatory & Compliance</div>
-<div class="card">Real Estate & Property Law</div>
-<div class="card">Startup & MSME Advisory</div>
-<div class="card">Legal Opinions & Risk Assessment</div>
-</div>
-</section>
-
-<section class="section" id="international">
-<h2>International & Cross-Border Practice</h2>
-<p>
-Gaurav Saini & Associates assists foreign law firms, overseas clients and international businesses with Indian legal and regulatory matters.
-We act as trusted local counsel for cross-border transactions, disputes and compliance.
-</p>
-<div class="service-grid">
-<div class="card">Foreign Law Firm Support</div>
-<div class="card">Cross-Border Legal Opinions</div>
-<div class="card">IPR & Brand Protection</div>
-<div class="card">Indian Regulatory Compliance</div>
-<div class="card">Contract Review & Risk Analysis</div>
-<div class="card">Litigation & Arbitration Support</div>
+<section class="section slide" id="careers">
+<h2>Careers</h2>
+<p>We invite applications from law students, interns and legal professionals.</p>
+<div class="form-box">
+<form action="mailto:gaurav@sainilegal.in" method="post" enctype="text/plain">
+<input type="text" name="Name" placeholder="Your Name" required>
+<input type="email" name="Email" placeholder="Your Email" required>
+<input type="text" name="Position" placeholder="Position Applying For">
+<textarea name="Message" placeholder="Brief about yourself"></textarea>
+<button type="submit">Submit Application</button>
+</form>
 </div>
 </section>
 
 <section class="section" id="contact">
-<h2>Contact</h2>
+<h2>Contact Us</h2>
 <p>Phone: +91-9811273738</p>
 <p>Email: gaurav@sainilegal.in</p>
 <div class="map-box">
