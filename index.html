@@ -73,13 +73,13 @@ nav a{
  font-weight:bold;
 }
 
-/* PROFILE PHOTO */
+/* ===== PROFILE PHOTO (NO CROP) ===== */
 .profile-pic{
- width:220px;
- height:220px;
+ width:240px;
+ height:260px;                /* taller container */
  border-radius:50%;
  object-fit:cover;
- object-position:center 35%;
+ object-position:center 55%;  /* 👈 pushes image down */
  box-shadow:0 10px 25px rgba(0,0,0,.25);
  margin:35px auto;
  display:block;
@@ -119,6 +119,19 @@ h2{
  border-radius:6px;
  border-top:4px solid #c9a24d;
  font-weight:bold;
+}
+
+/* GOOGLE MAP */
+.map-box{
+ max-width:1000px;
+ margin:30px auto;
+ border:4px solid #c9a24d;
+}
+
+.map-box iframe{
+ width:100%;
+ height:350px;
+ border:0;
 }
 
 /* FOOTER */
@@ -242,6 +255,15 @@ footer a{
  <p>📞 +91-9811273738</p>
  <p>✉️ gaurav@sainilegal.in</p>
  <p>📍 New Delhi, India</p>
+
+ <!-- GOOGLE MAP -->
+ <div class="map-box">
+  <iframe
+   src="https://www.google.com/maps?q=Supreme%20Court%20of%20India%2C%20New%20Delhi&output=embed"
+   loading="lazy"
+   referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+ </div>
 </section>
 
 <footer>
