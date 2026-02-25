@@ -7,20 +7,15 @@
 <title>Gaurav Saini | Advocate & Legal Consultant in New Delhi</title>
 <meta name="description" content="Gaurav Saini – Advocate & Legal Consultant in New Delhi providing litigation, advisory, tax, compliance, intellectual property and real estate legal services in India.">
 
-<!-- LOCAL SEO + LEGAL SERVICE SCHEMA -->
+<!-- SCHEMA -->
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "LegalService",
- "@id": "https://www.sainilegal.in/#legalservice",
  "name": "Gaurav Saini & Associates",
  "url": "https://www.sainilegal.in",
  "telephone": "+91-9811273738",
  "email": "gaurav@sainilegal.in",
- "areaServed": {
-   "@type": "AdministrativeArea",
-   "name": "New Delhi, India"
- },
  "address": {
    "@type": "PostalAddress",
    "addressLocality": "New Delhi",
@@ -31,13 +26,52 @@
 
 <style>
 html{scroll-behavior:smooth;}
-body{margin:0;font-family:Arial;color:#1f2937;line-height:1.6;}
-header{background:#0f2a44;color:#fff;padding:18px;text-align:center;}
-nav a{color:#c9a24d;margin:0 10px;text-decoration:none;font-weight:bold;}
-section{padding:50px 20px;text-align:center;}
-h1,h2,h3{color:#0f2a44;}
-section p{max-width:950px;margin:auto;}
-.services{background:#f3f4f6;}
+body{
+ margin:0;
+ font-family:Arial, sans-serif;
+ color:#1f2937;
+ line-height:1.6;
+ text-align:center;
+}
+
+header{
+ background:#0f2a44;
+ color:#fff;
+ padding:20px 15px;
+}
+
+/* LOGO */
+.logo{
+ max-width:180px;
+ margin-bottom:10px;
+}
+
+/* PROFILE PHOTO */
+.profile-pic{
+ width:200px;
+ height:200px;
+ border-radius:50%;
+ object-fit:cover;
+ box-shadow:0 10px 25px rgba(0,0,0,.25);
+ margin:30px auto;
+ display:block;
+}
+
+nav a{
+ color:#c9a24d;
+ margin:0 10px;
+ text-decoration:none;
+ font-weight:bold;
+}
+
+section{
+ padding:50px 20px;
+}
+
+.services{
+ background:#f3f4f6;
+}
+
 .grid{
  display:grid;
  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -45,6 +79,7 @@ section p{max-width:950px;margin:auto;}
  max-width:1100px;
  margin:30px auto;
 }
+
 .card{
  background:#fff;
  padding:22px;
@@ -52,62 +87,17 @@ section p{max-width:950px;margin:auto;}
  border-top:4px solid #c9a24d;
  font-weight:bold;
 }
+
 footer{
  background:#0f2a44;
  color:#fff;
- text-align:center;
  padding:18px;
  font-size:14px;
 }
-footer a{color:#c9a24d;text-decoration:none;margin:0 8px;}
-.whatsapp{
- position:fixed;
- bottom:20px;
- right:20px;
- background:#25d366;
- color:#fff;
- padding:14px 20px;
- border-radius:50px;
+
+footer a{
+ color:#c9a24d;
  text-decoration:none;
- font-weight:bold;
-}
-
-/* CONTACT FORM */
-form{
- max-width:600px;
- margin:30px auto;
- text-align:left;
-}
-input,textarea{
- width:100%;
- padding:10px;
- margin:8px 0;
- border:1px solid #ccc;
- border-radius:4px;
-}
-button{
- background:#0f2a44;
- color:#fff;
- padding:12px 20px;
- border:none;
- cursor:pointer;
- font-weight:bold;
-}
-
-/* DISCLAIMER */
-#disclaimer{
- position:fixed;inset:0;
- background:rgba(0,0,0,.85);
- display:flex;
- justify-content:center;
- align-items:center;
- z-index:5000;
-}
-.disclaimer-box{
- background:#fff;
- max-width:900px;
- padding:30px;
- border-radius:6px;
 }
 </style>
 </head>
@@ -115,37 +105,43 @@ button{
 <body>
 
 <!-- DISCLAIMER -->
-<div id="disclaimer">
- <div class="disclaimer-box">
+<div id="disclaimer" style="position:fixed;inset:0;background:rgba(0,0,0,.85);display:flex;justify-content:center;align-items:center;z-index:5000;">
+ <div style="background:#fff;max-width:850px;padding:30px;border-radius:6px;">
   <h2>Disclaimer</h2>
   <p>As per the rules of the Bar Council of India, advocates are not permitted to advertise or solicit work.</p>
-  <ul>
+  <ul style="text-align:left;">
    <li>This website is for informational purposes only.</li>
-   <li>No lawyer–client relationship is created by accessing this website.</li>
+   <li>No lawyer–client relationship is created.</li>
    <li>No solicitation or inducement is intended.</li>
    <li>Legal outcomes depend upon facts and applicable law.</li>
   </ul>
-  <p>By clicking “I Agree”, you confirm voluntary access.</p>
-  <button onclick="acceptDisclaimer()">I Agree</button>
+  <button onclick="acceptDisclaimer()" style="padding:10px 20px;background:#0f2a44;color:#fff;border:none;font-weight:bold;">I Agree</button>
  </div>
 </div>
 
 <header>
- <h1>Gaurav Saini</h1>
- <p>Advocate & Legal Consultant – New Delhi</p>
- <nav>
-  <a href="#about">About</a>
-  <a href="#practice">Practice Areas</a>
-  <a href="#contact">Contact</a>
- </nav>
+  <!-- LOGO -->
+  <img src="./images/logo.png" alt="Gaurav Saini & Associates Logo" class="logo">
+
+  <h1>Gaurav Saini</h1>
+  <p>Advocate & Legal Consultant – New Delhi</p>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#practice">Practice Areas</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
+
+<!-- PROFILE PHOTO -->
+<img src="./images/gaurav.jpg" alt="Advocate Gaurav Saini" class="profile-pic">
 
 <section id="about">
  <h2>About the Firm</h2>
  <p>
   <strong>Gaurav Saini & Associates</strong> is a New Delhi based law firm providing
-  litigation, advisory and compliance services across various areas of law.
-  The firm operates in accordance with applicable law and professional ethics.
+  litigation, advisory and compliance services in accordance with applicable law
+  and professional ethics.
  </p>
 </section>
 
@@ -163,28 +159,8 @@ button{
  </div>
 </section>
 
-<section>
- <h2>Why This Website Exists</h2>
- <p>
-  This website is intended solely to provide general information about areas of legal practice,
-  professional background, and contact details, in compliance with Bar Council of India rules.
- </p>
-</section>
-
 <section id="contact">
- <h2>Request Information</h2>
- <p>
-  You may share your details below for general information purposes only.
-  Submission of this form does not create a lawyer–client relationship.
- </p>
-
- <form method="post" action="#">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Email Address" required>
-  <textarea name="message" rows="4" placeholder="Brief description (optional)"></textarea>
-  <button type="submit">Submit</button>
- </form>
-
+ <h2>Contact</h2>
  <p>📞 +91-9811273738</p>
  <p>✉️ gaurav@sainilegal.in</p>
  <p>📍 New Delhi, India</p>
@@ -194,8 +170,6 @@ button{
  © 2026 Gaurav Saini & Associates |
  <a href="#" onclick="openDisclaimer()">Disclaimer</a>
 </footer>
-
-<a href="https://wa.me/919811273738" class="whatsapp" target="_blank">WhatsApp</a>
 
 <script>
 function acceptDisclaimer(){
