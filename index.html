@@ -18,7 +18,9 @@
  "email": "gaurav@sainilegal.in",
  "address": {
    "@type": "PostalAddress",
+   "streetAddress": "472-A, Hardev Puri, Gautam Nagar",
    "addressLocality": "New Delhi",
+   "postalCode": "110049",
    "addressCountry": "IN"
  }
 }
@@ -33,7 +35,7 @@ body{
  line-height:1.6;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header{
  background:#0f2a44;
  color:#fff;
@@ -44,27 +46,18 @@ header{
  flex-wrap:wrap;
 }
 
-/* LOGO */
 .logo{
  max-width:260px;
  height:auto;
 }
 
-/* CENTER TEXT */
 .header-text{
  text-align:center;
  flex:1;
 }
 
-.header-text h1{
- margin:0;
- font-size:28px;
-}
-
-.header-text p{
- margin:5px 0 10px;
- color:#e7cf87;
-}
+.header-text h1{margin:0;font-size:28px;}
+.header-text p{margin:5px 0 10px;color:#e7cf87;}
 
 nav a{
  color:#c9a24d;
@@ -73,16 +66,24 @@ nav a{
  font-weight:bold;
 }
 
-/* ===== PROFILE PHOTO (NO CROP) ===== */
-.profile-pic{
- width:240px;
- height:260px;                /* taller container */
+/* PROFILE PHOTO – NO CROP GUARANTEED */
+.profile-wrapper{
+ width:260px;
+ height:260px;
  border-radius:50%;
- object-fit:cover;
- object-position:center 55%;  /* 👈 pushes image down */
+ background:#f3f4f6;
+ margin:40px auto;
+ display:flex;
+ align-items:center;
+ justify-content:center;
  box-shadow:0 10px 25px rgba(0,0,0,.25);
- margin:35px auto;
- display:block;
+}
+
+.profile-pic{
+ width:100%;
+ height:100%;
+ border-radius:50%;
+ object-fit:contain;   /* 🔥 NO CROPPING */
 }
 
 /* SECTIONS */
@@ -91,19 +92,10 @@ section{
  text-align:center;
 }
 
-section p{
- max-width:950px;
- margin:auto;
-}
+section p{max-width:950px;margin:auto;}
+h2{color:#0f2a44;}
 
-h2{
- color:#0f2a44;
-}
-
-/* PRACTICE AREAS */
-.services{
- background:#f3f4f6;
-}
+.services{background:#f3f4f6;}
 
 .grid{
  display:grid;
@@ -121,7 +113,7 @@ h2{
  font-weight:bold;
 }
 
-/* GOOGLE MAP */
+/* MAP */
 .map-box{
  max-width:1000px;
  margin:30px auto;
@@ -143,10 +135,7 @@ footer{
  font-size:14px;
 }
 
-footer a{
- color:#c9a24d;
- text-decoration:none;
-}
+footer a{color:#c9a24d;text-decoration:none;}
 
 /* DISCLAIMER */
 #disclaimer{
@@ -166,9 +155,7 @@ footer a{
  border-radius:6px;
 }
 
-.disclaimer-box ul{
- text-align:left;
-}
+.disclaimer-box ul{text-align:left;}
 
 .disclaimer-box button{
  background:#0f2a44;
@@ -181,13 +168,8 @@ footer a{
 
 /* MOBILE */
 @media(max-width:768px){
- header{
-   flex-direction:column;
-   text-align:center;
- }
- .logo{
-   margin-bottom:10px;
- }
+ header{flex-direction:column;text-align:center;}
+ .logo{margin-bottom:10px;}
 }
 </style>
 </head>
@@ -209,7 +191,6 @@ footer a{
  </div>
 </div>
 
-<!-- HEADER -->
 <header>
   <img src="./images/logo.png" alt="Gaurav Saini & Associates Logo" class="logo">
 
@@ -225,7 +206,9 @@ footer a{
 </header>
 
 <!-- PROFILE PHOTO -->
-<img src="./images/gaurav.jpg" alt="Advocate Gaurav Saini" class="profile-pic">
+<div class="profile-wrapper">
+ <img src="./images/gaurav.jpg" alt="Advocate Gaurav Saini" class="profile-pic">
+</div>
 
 <section id="about">
  <h2>About the Firm</h2>
@@ -252,14 +235,13 @@ footer a{
 
 <section id="contact">
  <h2>Contact</h2>
+ <p>📍 472-A, Hardev Puri, Gautam Nagar, New Delhi – 110049</p>
  <p>📞 +91-9811273738</p>
  <p>✉️ gaurav@sainilegal.in</p>
- <p>📍 New Delhi, India</p>
 
- <!-- GOOGLE MAP -->
  <div class="map-box">
   <iframe
-   src="https://www.google.com/maps?q=Supreme%20Court%20of%20India%2C%20New%20Delhi&output=embed"
+   src="https://www.google.com/maps?q=472-A%20Hardev%20Puri%20Gautam%20Nagar%20New%20Delhi%20110049&output=embed"
    loading="lazy"
    referrerpolicy="no-referrer-when-downgrade">
   </iframe>
