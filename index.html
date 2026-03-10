@@ -46,16 +46,22 @@ color:#333;
 h1,h2,h3,h4{
 font-family:'Playfair Display',serif;
 font-weight:600;
+color:#0f2a44;
 }
 
+/* HEADER */
+
 header{
-background:#0f2a44;
+background:linear-gradient(135deg,#0f2a44 0%,#1c3e67 100%);
 color:#fff;
-padding:15px 30px;
+padding:18px 30px;
 display:flex;
 align-items:center;
 justify-content:space-between;
 flex-wrap:wrap;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 .logo{max-width:260px;}
@@ -64,21 +70,23 @@ flex-wrap:wrap;
 
 .header-text h1{margin:0;font-size:28px;}
 
-.header-text p{margin:5px 0 10px;color:#e7cf87;}
+.header-text p{margin:5px 0;color:#e7cf87;}
 
 nav a{
 color:#c9a24d;
 margin:0 10px;
 text-decoration:none;
-font-weight:bold;
+font-weight:600;
 }
+
+/* HERO IMAGE */
 
 .profile-wrapper{
 width:260px;
 height:260px;
 border-radius:50%;
 background:#f3f4f6;
-margin:40px auto;
+margin:50px auto;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -92,9 +100,18 @@ border-radius:50%;
 object-fit:contain;
 }
 
+/* SECTION */
+
 section{
-padding:40px 20px;
+padding:70px 20px;
 text-align:center;
+}
+
+.section-divider{
+width:80px;
+height:3px;
+background:#c9a24d;
+margin:15px auto 35px auto;
 }
 
 section p{
@@ -103,33 +120,37 @@ margin:15px auto;
 text-align:justify;
 }
 
-h2{color:#0f2a44;}
+/* GRID */
 
-.services{background:#f3f4f6;}
+.services{
+background:#f6f7f9;
+}
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:18px;
+gap:20px;
 max-width:1100px;
 margin:30px auto;
 }
 
 .card{
 background:#fff;
-padding:22px;
+padding:24px;
 border-radius:6px;
 border-top:4px solid #c9a24d;
-font-weight:bold;
-color:#1f2937;
-transition:.3s;
+font-weight:600;
+transition:.35s;
 }
 
 .card:hover{
 background:#0f2a44;
 color:#fff;
-transform:translateY(-5px);
+transform:translateY(-6px);
+box-shadow:0 12px 25px rgba(0,0,0,0.18);
 }
+
+/* PRACTICE DETAILS */
 
 .practice-columns{
 max-width:1100px;
@@ -142,15 +163,18 @@ text-align:left;
 
 .practice-box{
 background:#fff;
-padding:20px;
+padding:24px;
 border-left:4px solid #c9a24d;
-box-shadow:0 2px 6px rgba(0,0,0,0.08);
+box-shadow:0 8px 18px rgba(0,0,0,0.08);
+transition:.3s;
 }
 
-.practice-box h3{
-margin-top:0;
-color:#0f2a44;
+.practice-box:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
 }
+
+/* FORM */
 
 form{
 max-width:700px;
@@ -166,14 +190,19 @@ border:1px solid #ccc;
 border-radius:4px;
 }
 
+/* BUTTON */
+
 button{
-background:#0f2a44;
-color:#fff;
-padding:12px 20px;
+background:#c9a24d;
+color:#0f2a44;
+padding:12px 22px;
 border:none;
 font-weight:bold;
 cursor:pointer;
+border-radius:4px;
 }
+
+/* MAP */
 
 .map-box{
 max-width:1000px;
@@ -187,27 +216,32 @@ height:350px;
 border:0;
 }
 
+/* FOOTER */
+
 footer{
 background:#0f2a44;
 color:#fff;
 text-align:center;
-padding:18px;
+padding:25px;
 font-size:14px;
 }
 
+/* WHATSAPP */
+
 .whatsapp-button{
 position:fixed;
-bottom:20px;
-right:20px;
+bottom:25px;
+right:25px;
 background:#25D366;
 color:#fff;
-padding:14px 18px;
-border-radius:50px;
-text-decoration:none;
+padding:15px 20px;
+border-radius:40px;
 font-weight:bold;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
-z-index:999;
+text-decoration:none;
+box-shadow:0 6px 18px rgba(0,0,0,.25);
 }
+
+/* DISCLAIMER */
 
 #disclaimer{
 position:fixed;
@@ -227,14 +261,6 @@ border-radius:6px;
 text-align:left;
 }
 
-.disclaimer-box button{
-background:#0f2a44;
-color:#fff;
-padding:10px 20px;
-border:none;
-cursor:pointer;
-}
-
 @media(max-width:900px){
 .practice-columns{grid-template-columns:1fr;}
 }
@@ -246,6 +272,7 @@ cursor:pointer;
 <body>
 
 <div id="disclaimer">
+
 <div class="disclaimer-box">
 
 <h2>Disclaimer</h2>
@@ -274,7 +301,10 @@ This website is intended solely for informational purposes.
 <div class="header-text">
 
 <h1>Gaurav Saini & Associates</h1>
+
 <p>Advocate & Legal Consultant – New Delhi</p>
+
+<p style="font-size:15px;">Litigation • Corporate Advisory • Regulatory Compliance</p>
 
 <nav>
 <a href="#about">About</a>
@@ -295,17 +325,23 @@ This website is intended solely for informational purposes.
 <section id="about">
 
 <h2>About the Firm</h2>
+<div class="section-divider"></div>
 
 <p>
-Gaurav Saini & Associates is a New Delhi based law firm providing litigation, advisory and compliance related legal services.
-The firm operates strictly in accordance with applicable laws and professional ethics prescribed by the Bar Council of India.
+Gaurav Saini & Associates is a New Delhi based law firm providing litigation,
+advisory and compliance related legal services. The firm operates strictly in
+accordance with applicable laws and professional ethics prescribed by the
+Bar Council of India.
 </p>
 
 </section>
 
+<!-- PRACTICE AREA SECTION -->
+
 <section id="practice" class="services">
 
 <h2>Practice Areas</h2>
+<div class="section-divider"></div>
 
 <div class="grid">
 
@@ -322,59 +358,81 @@ The firm operates strictly in accordance with applicable laws and professional e
 
 </section>
 
+<!-- PRACTICE DETAILS (FULL TEXT PRESERVED) -->
+
 <section>
 
 <h2>Practice Area Details</h2>
+<div class="section-divider"></div>
 
 <div class="practice-columns">
 
 <div class="practice-box">
 <h3>Civil & Criminal Litigation</h3>
-<p>The firm represents clients before courts and tribunals in civil and criminal matters including contractual disputes, property litigation and recovery proceedings. Clients are assisted in drafting pleadings, filing matters and court appearances. Criminal practice includes advisory relating to complaints, FIR related matters and bail applications. Representation may also be provided during trial proceedings and appeals. All litigation services are rendered in accordance with applicable procedural laws.</p>
+<p>
+The firm represents clients before courts and tribunals in civil and criminal matters including contractual disputes, property litigation and recovery proceedings. Clients are assisted in drafting pleadings, filing matters and court appearances. Criminal practice includes advisory relating to complaints, FIR related matters and bail applications. Representation may also be provided during trial proceedings and appeals. All litigation services are rendered in accordance with applicable procedural laws.
+</p>
 </div>
 
 <div class="practice-box">
 <h3>Labour & Service Law</h3>
-<p>The firm advises individuals and organizations in employment related matters including industrial disputes and service issues. Assistance may include advisory relating to employment contracts and workplace compliance. Clients may also be represented before labour courts and tribunals. The firm assists in disciplinary proceedings and employment disputes. All services are provided in accordance with applicable labour legislation.</p>
+<p>
+The firm advises individuals and organizations in employment related matters including industrial disputes and service issues. Assistance may include advisory relating to employment contracts and workplace compliance. Clients may also be represented before labour courts and tribunals. The firm assists in disciplinary proceedings and employment disputes. All services are provided in accordance with applicable labour legislation.
+</p>
 </div>
 
 <div class="practice-box">
 <h3>Corporate & Commercial Advisory</h3>
-<p>The firm provides legal advisory services relating to commercial transactions and corporate governance. Assistance may include drafting and reviewing commercial agreements and contracts. Businesses may be advised on regulatory compliance and corporate documentation. Legal risks associated with business transactions are also reviewed. Services are provided within the framework of corporate and commercial laws.</p>
+<p>
+The firm provides legal advisory services relating to commercial transactions and corporate governance. Assistance may include drafting and reviewing commercial agreements and contracts. Businesses may be advised on regulatory compliance and corporate documentation. Legal risks associated with business transactions are also reviewed. Services are provided within the framework of corporate and commercial laws.
+</p>
 </div>
 
 <div class="practice-box">
 <h3>Tax & Regulatory Compliance</h3>
-<p>Advisory services are provided relating to statutory compliance and regulatory frameworks applicable to businesses. Clients may be assisted in understanding tax related legal issues and regulatory obligations. The firm assists in documentation and legal compliance matters. Guidance may also be provided in addressing regulatory proceedings. Services are rendered in accordance with applicable tax and regulatory laws.</p>
+<p>
+Advisory services are provided relating to statutory compliance and regulatory frameworks applicable to businesses. Clients may be assisted in understanding tax related legal issues and regulatory obligations. The firm assists in documentation and legal compliance matters. Guidance may also be provided in addressing regulatory proceedings. Services are rendered in accordance with applicable tax and regulatory laws.
+</p>
 </div>
 
 <div class="practice-box">
 <h3>Intellectual Property Rights</h3>
-<p>The firm assists clients in matters relating to protection and enforcement of intellectual property rights. Services include advisory relating to trademarks, copyrights and other IP assets. Clients may be assisted with registration procedures and documentation. The firm also assists in addressing intellectual property disputes where required. Services are rendered within the framework of applicable intellectual property laws.</p>
+<p>
+The firm assists clients in matters relating to protection and enforcement of intellectual property rights. Services include advisory relating to trademarks, copyrights and other IP assets. Clients may be assisted with registration procedures and documentation. The firm also assists in addressing intellectual property disputes where required. Services are rendered within the framework of applicable intellectual property laws.
+</p>
 </div>
 
 <div class="practice-box">
 <h3>Real Estate & Property Law</h3>
-<p>Legal advisory services are provided relating to property transactions and disputes. Assistance may include title verification, property documentation and regulatory compliance. Clients may be assisted in property litigation and dispute resolution. The firm provides guidance in understanding legal aspects of property ownership and transfers. Services are provided in accordance with applicable property laws.</p>
+<p>
+Legal advisory services are provided relating to property transactions and disputes. Assistance may include title verification, property documentation and regulatory compliance. Clients may be assisted in property litigation and dispute resolution. The firm provides guidance in understanding legal aspects of property ownership and transfers. Services are provided in accordance with applicable property laws.
+</p>
 </div>
 
 <div class="practice-box">
 <h3>Arbitration & Mediation</h3>
-<p>The firm assists clients in resolving disputes through arbitration and mediation mechanisms. Advisory services may be provided during arbitration proceedings and settlement discussions. Assistance may include drafting arbitration related documentation. Clients may also be represented during arbitration proceedings where appropriate. The objective remains efficient and lawful dispute resolution.</p>
+<p>
+The firm assists clients in resolving disputes through arbitration and mediation mechanisms. Advisory services may be provided during arbitration proceedings and settlement discussions. Assistance may include drafting arbitration related documentation. Clients may also be represented during arbitration proceedings where appropriate. The objective remains efficient and lawful dispute resolution.
+</p>
 </div>
 
 <div class="practice-box">
 <h3>Legal Drafting & Opinions</h3>
-<p>The firm undertakes drafting of legal documents including agreements, contracts, pleadings and notices. Legal opinions may be provided based on the facts and applicable law. Drafting services emphasize clarity and legal accuracy. Clients may be assisted in preparing documentation for litigation or transactions. Legal opinions are advisory in nature and based on applicable legal provisions.</p>
+<p>
+The firm undertakes drafting of legal documents including agreements, contracts, pleadings and notices. Legal opinions may be provided based on the facts and applicable law. Drafting services emphasize clarity and legal accuracy. Clients may be assisted in preparing documentation for litigation or transactions. Legal opinions are advisory in nature and based on applicable legal provisions.
+</p>
 </div>
 
 </div>
 
 </section>
 
+<!-- CLIENTS -->
+
 <section id="clients" class="services">
 
 <h2>Clients We Cater To</h2>
+<div class="section-divider"></div>
 
 <div class="grid">
 
@@ -391,9 +449,12 @@ The firm operates strictly in accordance with applicable laws and professional e
 
 </section>
 
+<!-- CAREERS -->
+
 <section id="careers">
 
 <h2>Careers</h2>
+<div class="section-divider"></div>
 
 <p>Applications are invited from law students and legal professionals interested in internship or associate positions.</p>
 
@@ -429,9 +490,12 @@ The firm operates strictly in accordance with applicable laws and professional e
 
 </section>
 
+<!-- CONTACT -->
+
 <section id="contact">
 
 <h2>Contact</h2>
+<div class="section-divider"></div>
 
 <p>📍 472-A, Hardev Puri, Gautam Nagar, New Delhi – 110049</p>
 <p>📞 +91-9811273738</p>
