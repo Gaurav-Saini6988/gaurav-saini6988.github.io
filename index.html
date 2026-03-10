@@ -34,9 +34,11 @@ color:#0f2a44;
 
 /* HEADER */
 
+/* HEADER */
+
 header{
 background:#0f2a44;
-padding:5px 15px;
+padding:4px 20px;
 position:sticky;
 top:0;
 z-index:1000;
@@ -44,41 +46,45 @@ border-bottom:2px solid #c9a24d;
 }
 
 .header-row{
-display:flex;
+display:grid;
+grid-template-columns:220px 1fr;
 align-items:center;
-gap:15px;
 }
 
 .logo{
-width:190px;
+width:200px;
 height:auto;
 }
 
 .header-text{
-text-align:left;
+text-align:center;
 }
 
 .header-text h1{
 margin:0;
-font-size:26px;
-line-height:1.1;
+font-size:36px;
 color:#c9a24d;
+line-height:1.1;
 }
 
 .header-text p{
-margin:0;
-font-size:14px;
+margin:2px 0 0 0;
+font-size:18px;
 color:#c9a24d;
 }
 
 nav{
-margin-top:4px;
+margin-top:2px;
 text-align:center;
 }
 
 nav a{
-font-size:13px;
-margin:0 8px;
+color:#c9a24d;
+margin:0 12px;
+text-decoration:none;
+font-weight:600;
+font-size:15px;
+}
 }
 /* PROFILE IMAGE */
 
@@ -496,7 +502,9 @@ Bar Council of India.
 <img src="./images/logo.png" alt="Gaurav Saini & Associates Logo">
 </div>
 
-<p>© 2026 Gaurav Saini & Associates. All Rights Reserved.</p>
+<div class="footer-text">
+© 2026 Gaurav Saini & Associates. All Rights Reserved.
+</div>
 
 </footer>
 
