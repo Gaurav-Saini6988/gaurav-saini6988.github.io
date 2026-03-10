@@ -36,35 +36,36 @@ color:#0f2a44;
 
 header{
 background:#0f2a44;
-color:#fff;
 padding:20px 40px;
 position:sticky;
 top:0;
 z-index:1000;
 }
 
-.header-container{
-display:flex;
+.header-row{
+display:grid;
+grid-template-columns:260px 1fr 260px;
 align-items:center;
-justify-content:flex-start;
-gap:25px;
-flex-wrap:wrap;
 }
 
 .logo{
-max-width:220px;
+max-width:260px;
+}
+
+.header-text{
+text-align:center;
 }
 
 .header-text h1{
 margin:0;
-font-size:44px;
+font-size:46px;
 color:#c9a24d;
 }
 
 .header-text p{
-margin:6px 0 0 0;
+margin-top:6px;
+font-size:18px;
 color:#c9a24d;
-font-size:17px;
 }
 
 nav{
@@ -78,7 +79,6 @@ margin:0 14px;
 text-decoration:none;
 font-weight:600;
 }
-
 /* PROFILE IMAGE */
 
 .profile-wrapper{
@@ -298,7 +298,7 @@ This website is intended solely for informational purposes.
 
 <header>
 
-<div class="header-container">
+<div class="header-row">
 
 <img src="./images/logo.png" class="logo">
 
