@@ -393,3 +393,21 @@ document.getElementById("disclaimer").style.display="none";
 
 </body>
 </html>
+WhatsApp
+</a>
+
+<script>
+
+function acceptDisclaimer(){
+localStorage.setItem("bciDisclaimer","accepted");
+document.getElementById("disclaimer").style.display="none";
+}
+
+if(localStorage.getItem("bciDisclaimer")==="accepted"){
+document.getElementById("disclaimer").style.display="none";
+}
+
+</script>
+
+</body>
+</html>
