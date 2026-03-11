@@ -154,17 +154,12 @@ font-weight:bold;
 <body>
 
 <div id="disclaimer">
+
 <div class="disclaimer-box">
-...
-</div>
-</div>
 
 <h2>Disclaimer</h2>
-<p>...</p>
 
-<p>
-As per the rules of the Bar Council of India, advocates are not permitted to advertise or solicit work. This website is intended solely for informational purposes.
-</p>
+<p>As per the rules of the Bar Council of India...</p>
 
 <ul>
 <li>No material on this website should be interpreted as legal advice.</li>
@@ -176,6 +171,7 @@ As per the rules of the Bar Council of India, advocates are not permitted to adv
 <button onclick="acceptDisclaimer()">I Agree</button>
 
 </div>
+
 </div>
 
 <header>
@@ -330,18 +326,20 @@ The firm undertakes drafting of legal documents including agreements, contracts,
 
 <script>
 
-function acceptDisclaimer(){
+document.addEventListener("DOMContentLoaded", function(){
+
+const disclaimer = document.getElementById("disclaimer");
+
+if(localStorage.getItem("bciDisclaimer") !== "accepted"){
+disclaimer.style.display = "flex";
+}
+
+window.acceptDisclaimer = function(){
 localStorage.setItem("bciDisclaimer","accepted");
-document.getElementById("disclaimer").style.display="none";
-}
+disclaimer.style.display = "none";
+};
 
-window.onload=function(){
-
-if(localStorage.getItem("bciDisclaimer")==="accepted"){
-document.getElementById("disclaimer").style.display="none";
-}
-
-}
+});
 
 </script>
 
