@@ -81,8 +81,21 @@ h2{color:#0f2a44;text-align:center;}
 
 .card:hover{background:#0f2a44;color:#fff;transform:translateY(-5px);}
 
+.practice-details-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+max-width:1100px;
+margin:30px auto;
+}
+
 .practice-detail{
-max-width:1000px;margin:20px auto;text-align:left;
+text-align:left;
+}
+
+@media(max-width:900px){
+.practice-details-grid{
+grid-template-columns:1fr;
 }
 
 .map-box{
@@ -203,6 +216,7 @@ Gaurav Saini & Associates is a New Delhi based law firm providing litigation, ad
 
 </section>
 
+<div class="practice-details-grid">
 <section id="civil" class="practice-detail">
 <h2>Civil & Criminal Litigation</h2>
 <p>
@@ -259,8 +273,10 @@ The firm undertakes drafting of legal documents including agreements, contracts,
 </p>
 </section>
 
-<section id="clients" class="services">
+</div>
 
+<section id="clients" class="services">
+	
 <h2>Clients We Cater To</h2>
 
 <div class="grid">
