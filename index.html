@@ -35,11 +35,9 @@ color:#0f2a44;
 
 /* HEADER */
 
-/* HEADER */
-
 header{
 background:#0f2a44;
-padding:1px 20px;
+padding:3px 20px;
 position:sticky;
 top:0;
 z-index:1000;
@@ -48,23 +46,42 @@ border-bottom:2px solid #c9a24d;
 
 .header-row{
 display:grid;
-grid-template-columns:300px 1fr 300px;
+grid-template-columns:260px 1fr 260px;
 align-items:center;
+}
+
+.logo{
+width:300px;
+height:auto;
+}
+
+.header-text{
+text-align:center;
 }
 
 .header-text h1{
 margin:0;
-line-height:1;
+font-size:40px;
+color:#c9a24d;
 }
 
 .header-text p{
 margin:0;
-line-height:1;
+font-size:18px;
+color:#c9a24d;
 }
 
 nav{
-margin-top:0px;
+margin-top:2px;
 text-align:center;
+}
+
+nav a{
+color:#c9a24d;
+margin:0 10px;
+text-decoration:none;
+font-weight:600;
+font-size:14px;
 }
 
 /* PROFILE IMAGE */
@@ -209,7 +226,7 @@ border:0;
 
 footer{
 background:#0f2a44;
-padding:1px 20px;
+padding:3px 20px;
 display:grid;
 grid-template-columns:320px 1fr 320px;
 align-items:center;
@@ -225,9 +242,7 @@ height:auto;
 .footer-text{
 text-align:center;
 white-space:nowrap;
-line-height:1;
-}
-/* WHATSAPP */
+}/* WHATSAPP */
 
 .whatsapp-button{
 position:fixed;
@@ -483,8 +498,6 @@ Bar Council of India.
 
 <footer>
 
-<footer>
-
 <div class="footer-logo">
 <img src="./images/logo.png" alt="Gaurav Saini & Associates Logo">
 </div>
@@ -492,8 +505,6 @@ Bar Council of India.
 <div class="footer-text">
 © 2026 Gaurav Saini & Associates. All Rights Reserved.
 </div>
-
-</footer>
 
 </footer>
 
