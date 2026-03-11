@@ -56,6 +56,50 @@ nav a{color:#c9a24d;margin:0 10px;text-decoration:none;font-weight:bold;}
  object-fit:contain;
 }
 
+/* HERO CAREER FORM */
+
+.hero-career{
+max-width:700px;
+margin:30px auto 10px auto;
+background:#f3f4f6;
+padding:25px;
+border-radius:6px;
+box-shadow:0 8px 20px rgba(0,0,0,.12);
+text-align:left;
+}
+
+.hero-career h3{
+margin-top:0;
+color:#0f2a44;
+text-align:center;
+}
+
+.hero-career input,
+.hero-career textarea,
+.hero-career select{
+width:100%;
+padding:10px;
+margin:8px 0;
+border:1px solid #ccc;
+border-radius:4px;
+font-size:14px;
+}
+
+.hero-career button{
+background:#0f2a44;
+color:#fff;
+border:none;
+padding:12px 18px;
+border-radius:4px;
+cursor:pointer;
+font-weight:bold;
+margin-top:10px;
+}
+
+.hero-career button:hover{
+background:#091a2a;
+}
+
 section{padding:50px 20px;text-align:center;}
 
 section p{
@@ -155,6 +199,70 @@ margin-top:15px;
 font-weight:bold;
 }
 
+/* CAREER SECTION PROFESSIONAL */
+
+.career-section{
+background:#f3f4f6;
+padding:60px 20px;
+}
+
+.career-container{
+max-width:900px;
+margin:auto;
+background:#fff;
+padding:35px;
+border-radius:6px;
+box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+
+.career-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.career-grid input,
+.career-grid select,
+.career-grid textarea{
+width:100%;
+padding:10px;
+border:1px solid #ccc;
+border-radius:4px;
+font-size:14px;
+}
+
+.career-grid textarea{
+grid-column:span 2;
+}
+
+.career-submit{
+text-align:center;
+margin-top:20px;
+}
+
+.career-submit button{
+background:#0f2a44;
+color:#fff;
+border:none;
+padding:12px 24px;
+border-radius:4px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.career-submit button:hover{
+background:#091a2a;
+}
+
+@media(max-width:700px){
+.career-grid{
+grid-template-columns:1fr;
+}
+.career-grid textarea{
+grid-column:span 1;
+}
+}
+
 </style>
 </head>
 
@@ -195,6 +303,7 @@ font-weight:bold;
 <a href="#about">About</a>
 <a href="#practice">Practice Areas</a>
 <a href="#clients">Clients</a>
+<a href="#careers">Careers</a>
 <a href="#contact">Contact</a>
 </nav>
 
@@ -308,6 +417,105 @@ The firm undertakes drafting of legal documents including agreements, contracts,
 <div class="card">Non-Profit Organizations</div>
 <div class="card">Educational Institutions</div>
 <div class="card">Individual Clients</div>
+
+</div>
+
+</section>
+
+<section id="careers" class="services">
+
+<h2>Careers</h2>
+
+<p style="text-align:center;max-width:700px;margin:auto;">
+Applications are invited from law students and legal professionals interested in internship or associate positions.
+</p>
+
+<form action="https://formsubmit.co/gaurav@sainilegal.in" method="POST" enctype="multipart/form-data" style="max-width:700px;margin:30px auto;text-align:left;">
+
+<input type="hidden" name="_captcha" value="false">
+
+<label>Full Name</label>
+<input type="text" name="name" required>
+
+<label>Email</label>
+<input type="email" name="email" required>
+
+<label>Phone</label>
+<input type="text" name="phone">
+
+<label>Position</label>
+<select name="position">
+<option>Legal Intern</option>
+<option>Junior Associate</option>
+<option>Litigation Associate</option>
+</select>
+
+<label>Upload CV</label>
+<input type="file" name="attachment" required>
+
+<label>Message</label>
+<textarea name="message"></textarea>
+
+<button type="submit">Submit Application</button>
+
+</form>
+
+</section>
+
+<section id="careers" class="career-section">
+
+<h2>Careers</h2>
+
+<p style="text-align:center;max-width:700px;margin:auto;">
+Applications are invited from law students and legal professionals interested in internship or associate positions.
+</p>
+
+<div class="career-container">
+
+<form action="https://formsubmit.co/gaurav@sainilegal.in" method="POST" enctype="multipart/form-data">
+
+<input type="hidden" name="_captcha" value="false">
+
+<div class="career-grid">
+
+<div>
+<label>Full Name</label>
+<input type="text" name="name" required>
+</div>
+
+<div>
+<label>Email</label>
+<input type="email" name="email" required>
+</div>
+
+<div>
+<label>Phone</label>
+<input type="text" name="phone">
+</div>
+
+<div>
+<label>Position</label>
+<select name="position">
+<option>Legal Intern</option>
+<option>Junior Associate</option>
+<option>Litigation Associate</option>
+</select>
+</div>
+
+<div>
+<label>Upload CV</label>
+<input type="file" name="attachment" required>
+</div>
+
+<textarea name="message" placeholder="Message"></textarea>
+
+</div>
+
+<div class="career-submit">
+<button type="submit">Submit Application</button>
+</div>
+
+</form>
 
 </div>
 
