@@ -112,13 +112,13 @@ footer{
 /* DISCLAIMER */
 
 #disclaimer{
- position:fixed;
- inset:0;
- background:rgba(0,0,0,.85);
- display:flex;
- justify-content:center;
- align-items:center;
- z-index:9999;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.85);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
 }
 
 .disclaimer-box{
@@ -315,12 +315,16 @@ The firm undertakes drafting of legal documents including agreements, contracts,
 <script>
 
 function acceptDisclaimer(){
-localStorage.setItem("bciDisclaimer","accepted");
 document.getElementById("disclaimer").style.display="none";
+localStorage.setItem("bciDisclaimer","accepted");
 }
 
+window.onload=function(){
 if(localStorage.getItem("bciDisclaimer")==="accepted"){
 document.getElementById("disclaimer").style.display="none";
+}else{
+document.getElementById("disclaimer").style.display="flex";
+}
 }
 
 </script>
