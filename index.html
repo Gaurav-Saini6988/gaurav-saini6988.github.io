@@ -67,7 +67,7 @@ justify-content:space-between;
 max-width:1200px;
 margin:0 auto;
 position:relative;
-padding:26px 20px;
+padding:40px 20px;   /* increased height */
 }
 
 /* LOGO */
@@ -114,9 +114,9 @@ cursor:pointer;
 .main-nav{
 display:flex;
 justify-content:center;
-gap:30px;
+gap:28px;
 background:#0f2a44;
-padding:10px 0;
+padding:4px 0;   /* reduced height */
 border-top:1px solid rgba(255,255,255,0.1);
 }
 
@@ -124,7 +124,9 @@ border-top:1px solid rgba(255,255,255,0.1);
 color:#c9a24d;
 text-decoration:none;
 font-weight:600;
-font-size:16px;
+font-size:15px;
+padding:4px 0;
+margin:2px 0;
 }
 
 .main-nav a:hover{
@@ -139,7 +141,9 @@ border-bottom:2px solid #c9a24d;
 .main-nav{
 display:none;
 flex-direction:column;
-gap:12px;
+align-items:center;
+gap:10px;
+padding:10px 0;
 }
 
 .main-nav.active{
@@ -148,17 +152,9 @@ display:flex;
 
 .menu-toggle{
 display:block;
+cursor:pointer;
 }
 
-}
-
-.main-nav a{
-color:#c9a24d;
-text-decoration:none;
-font-weight:600;
-font-size:16px;
-padding:8px 0;
-margin:6px 0;
 }
 
 .main-nav a:hover{
@@ -258,20 +254,24 @@ padding:0 20px;
 
 .card{
 background:#fff;
-padding:18px;
+padding:20px 22px;
 border-radius:6px;
 border-top:4px solid #c9a24d;
 text-decoration:none;
 color:#1f2937;
 transition:.3s;
-text-align:center;
+display:flex;
+align-items:center;
+gap:16px;
 box-shadow:0 8px 20px rgba(0,0,0,0.08);
+font-weight:600;
 }
 
 .card i{
-font-size:28px;
+font-size:38px;
 color:#c9a24d;
-margin-bottom:6px;
+min-width:45px;
+text-align:center;
 }
 
 .card h3{
@@ -315,13 +315,13 @@ padding:0 20px;
 
 .practice-detail{
 text-align:left;
-padding-bottom:8px;
+padding-bottom:4px;
 border-bottom:2px solid #c9a24d;
-margin-bottom:8px;
+margin-bottom:4px;
 }	
 
 .practice-detail h2{
-margin-bottom:8px;
+margin-bottom:4px;
 }
 
 .practice-detail p,
@@ -330,7 +330,7 @@ font-family:'Source Sans Pro', sans-serif;
 font-size:15px;
 line-height:1.6;
 color:#1f2937;
-margin-top:4px;
+margin-top:2px;
 }
 
 @media(max-width:900px){
@@ -531,10 +531,11 @@ grid-column:span 1;
 /* HERO BANNER STYLE */
 
 .hero-banner{
-background:url('./images/hero-banner.png') no-repeat center top;
-background-size:cover;
-min-height:360px;
+background:url('./images/hero-banner.png') no-repeat center center;
+background-size:contain;
+height:420px;
 position:relative;
+background-color:#0f2a44;
 }
 
 .hero-banner::before{
@@ -637,49 +638,41 @@ Gaurav Saini & Associates is a New Delhi based law firm providing litigation, ad
 
 <a href="#civil" class="card">
 <i class="fa-solid fa-scale-balanced"></i>
-<br><br>
 Civil & Criminal Litigation
 </a>
 
 <a href="#labour" class="card">
 <i class="fa-solid fa-user-tie"></i>
-<br><br>
 Labour & Service Law
 </a>
 
 <a href="#corporate" class="card">
 <i class="fa-solid fa-building"></i>
-<br><br>
 Corporate & Commercial Advisory
 </a>
 
 <a href="#tax" class="card">
 <i class="fa-solid fa-chart-line"></i>
-<br><br>
 Tax, Risk & Regulatory Compliance
 </a>
 
 <a href="#ipr" class="card">
 <i class="fa-solid fa-lightbulb"></i>
-<br><br>
 Intellectual Property Rights
 </a>
 
 <a href="#realestate" class="card">
 <i class="fa-solid fa-house"></i>
-<br><br>
 Real Estate & Property Law
 </a>
 
 <a href="#adr" class="card">
 <i class="fa-solid fa-handshake"></i>
-<br><br>
 Arbitration & Mediation
 </a>
 
 <a href="#drafting" class="card">
 <i class="fa-solid fa-file-contract"></i>
-<br><br>
 Legal Drafting & Opinions
 </a>
 
