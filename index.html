@@ -100,12 +100,26 @@ color:#c9a24d;
 
 /* NAVIGATION */
 
+.menu-toggle{
+position:absolute;
+right:20px;
+top:30px;
+font-size:24px;
+color:#c9a24d;
+cursor:pointer;
+}
+
 .main-nav{
-display:flex;
-justify-content:center;
-gap:35px;
-padding:12px 0;
+flex-direction:column;
+align-items:center;
+display:none;
+background:#0f2a44;
+padding:20px 0;
 border-top:1px solid rgba(255,255,255,0.1);
+}
+
+.main-nav.active{
+display:flex;
 }
 
 .main-nav a{
@@ -113,6 +127,8 @@ color:#c9a24d;
 text-decoration:none;
 font-weight:600;
 font-size:16px;
+padding:8px 0;
+margin:6px 0;
 }
 
 .main-nav a:hover{
@@ -122,15 +138,16 @@ padding-bottom:3px;
 }
 
 .profile-wrapper{
-width:240px;
-height:240px;
+width:220px;
+height:220px;
 border-radius:50%;
 background:#f3f4f6;
-margin:-120px auto 30px auto;
+margin:40px auto 20px auto;
 display:flex;
 align-items:center;
 justify-content:center;
 box-shadow:0 10px 25px rgba(0,0,0,.25);
+border:6px solid white;
 }
 
 .profile-wrapper img{
@@ -139,6 +156,10 @@ box-shadow:0 10px 25px rgba(0,0,0,.25);
  border-radius:50%;
  object-fit:cover;
  object-position:top;
+}
+
+#about{
+margin-top:10px;
 }
 
 /* HERO CAREER FORM */
@@ -186,7 +207,7 @@ background:#091a2a;
 }
 
 section{
-padding:40px 20px;
+padding:30px 20px;
 }
 
 section p{
@@ -537,8 +558,11 @@ The information provided on this website is for general informational purposes o
 <p>Advocate & Legal Consultant – New Delhi</p>
 </div>
 
+<div class="menu-toggle" onclick="toggleMenu()">
+<i class="fa-solid fa-bars"></i>
 </div>
 
+</div>
 <nav class="main-nav">
 <a href="#about">About</a>
 <a href="#practice">Practice Areas</a>
@@ -842,6 +866,10 @@ Applications are invited from law students and legal professionals interested in
 </footer>
 
 <script>
+
+function toggleMenu(){
+document.querySelector(".main-nav").classList.toggle("active");
+}
 
 document.addEventListener("DOMContentLoaded", function(){
 
