@@ -568,12 +568,13 @@ grid-column:span 1;
 /* HERO BANNER STYLE */
 
 .hero-banner{
-background:url('./images/hero-banner.png') no-repeat center;
-background-size:cover;
-height:60vh;
-min-height:520px;
 width:100%;
-position:relative;
+}
+
+.hero-banner img{
+width:100%;
+height:auto;
+display:block;
 }
 
 .hero-banner::before{
@@ -583,9 +584,9 @@ top:0;
 left:0;
 right:0;
 bottom:0;
-background:rgba(15,42,68,0.25);
+background:rgba(15,42,68,0.45);
 }
-	
+
 .hero-content{
 position:relative;
 max-width:1200px;
@@ -655,9 +656,7 @@ The information provided on this website is for general informational purposes o
 </header>
 
 <section class="hero-banner">
-<span class="visually-hidden">
-Gaurav Saini Advocate & Legal Consultant New Delhi
-</span>
+<img src="./images/hero-banner.png" alt="Gaurav Saini Advocate & Legal Consultant New Delhi">
 </section>
 
 <section id="about">
