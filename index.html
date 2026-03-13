@@ -53,87 +53,54 @@ font-weight:700;
 
 header{
 background:#0f2a44;
-color:#fff;
+color:white;
 border-bottom:3px solid #c9a24d;
-padding:8px 20px;
 }
 
-/* HEADER LAYOUT */
+/* TOP HEADER */
 
-.header-container{
+.header-top{
 display:grid;
 grid-template-columns:auto 1fr auto;
 align-items:center;
 max-width:1200px;
 margin:auto;
+padding:8px 20px;
 }
 
-/* LOGO LEFT */
+/* LOGO */
 
 .logo{
-width:320px;
+width:220px;
 height:auto;
 }
 
-/* TITLE CENTER */
+/* TITLE */
 
-.header-text{
+.header-title{
 text-align:center;
 }
 
-.header-text h1{
+.header-title h1{
 margin:0;
 font-size:28px;
 color:#c9a24d;
+font-family:'Merriweather', serif;
 }
 
-.header-text p{
+.header-title p{
 margin:0;
 font-size:13px;
 color:#c9a24d;
 }
 
-/* CENTER TITLE */
-
-.header-text{
-position:absolute;
-left:50%;
-transform:translateX(-50%);
-text-align:center;
-}
-
-.header-text h1{
-margin:0;
-font-size:30px;
-color:#c9a24d;
-letter-spacing:0.5px;
-}
-
-.header-text p{
-margin:0;
-color:#c9a24d;
-font-size:13px;
-}
-
-.header-text{
-text-align:center;
-}
-
-.header-text h1{
-margin:0;
-font-size:30px;
-color:#c9a24d;
-line-height:1.15;
-letter-spacing:0.6px;
-text-align:center;
-}
+/* NAVIGATION */
 
 .main-nav{
 display:flex;
 justify-content:center;
 gap:30px;
-padding:3px 0;
-background:#0f2a44;
+padding:6px 0;
 border-top:1px solid rgba(255,255,255,0.1);
 }
 
@@ -384,15 +351,13 @@ grid-column:span 1;
 
 <header>
 
-<div class="header-container">
+<div class="header-top">
 
 <img src="./images/logo.png" class="logo">
 
-<div class="header-text">
-
+<div class="header-title">
 <h1>Gaurav Saini & Associates</h1>
 <p>Advocate & Legal Consultant – New Delhi</p>
-
 </div>
 
 </div>
@@ -404,9 +369,6 @@ grid-column:span 1;
 <a href="#careers">Careers</a>
 <a href="#contact">Contact</a>
 </nav>
-</div>
-
-</div>
 
 </header>
 
