@@ -221,10 +221,9 @@ margin-top:10px;
 background:#091a2a;
 }
 
-section{
+section:not(.hero-banner){
 padding:14px 20px;
 }
-
 /* ADD THIS BELOW */
 
 #clients{
@@ -569,29 +568,14 @@ grid-column:span 1;
 
 .hero-banner{
 width:100%;
+padding:0;
+margin:0;
 }
 
 .hero-banner img{
 width:100%;
 height:auto;
 display:block;
-}
-
-.hero-banner::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-right:0;
-bottom:0;
-background:rgba(15,42,68,0.45);
-}
-
-.hero-content{
-position:relative;
-max-width:1200px;
-margin:auto;
-padding-left:60px;
 }
 
 .hero-content h1{
