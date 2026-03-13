@@ -103,10 +103,11 @@ color:#c9a24d;
 .menu-toggle{
 position:absolute;
 right:20px;
-top:30px;
-font-size:24px;
+top:35px;
+font-size:26px;
 color:#c9a24d;
 cursor:pointer;
+z-index:1001;
 }
 
 /* DESKTOP NAVIGATION */
@@ -114,10 +115,14 @@ cursor:pointer;
 .main-nav{
 display:flex;
 justify-content:center;
-gap:28px;
+gap:30px;
 background:#0f2a44;
-padding:4px 0;   /* reduced height */
+padding:6px 0;
 border-top:1px solid rgba(255,255,255,0.1);
+}
+
+.main-nav.active{
+display:flex;
 }
 
 .main-nav a{
@@ -128,13 +133,6 @@ font-size:15px;
 padding:4px 0;
 margin:2px 0;
 }
-
-.main-nav a:hover{
-color:#fff;
-border-bottom:2px solid #c9a24d;
-}
-
-/* MOBILE NAVIGATION */
 
 @media(max-width:768px){
 
@@ -212,7 +210,7 @@ background:#091a2a;
 }
 
 section{
-padding:20px 20px;
+padding:14px 20px;
 }
 
 /* ADD THIS BELOW */
@@ -245,11 +243,18 @@ margin:6px auto 12px auto;
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:18px;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
 max-width:1100px;
-margin:10px auto;
+margin:6px auto;
 padding:0 20px;
+justify-items:center;
+}
+
+@media(max-width:768px){
+.grid{
+grid-template-columns:1fr;
+}
 }
 
 .card{
@@ -267,18 +272,31 @@ box-shadow:0 8px 20px rgba(0,0,0,0.08);
 font-weight:600;
 }
 
-.card i{
-font-size:38px;
-color:#c9a24d;
-min-width:45px;
+#clients .card{
+display:block;
 text-align:center;
 }
 
-.card h3{
-font-family:'Merriweather', serif;
-font-size:20px;
-color:#0f2a44;
+.grid .card:nth-last-child(2){
+grid-column:1 / span 1;
+}
+
+.grid .card:last-child{
+grid-column:2 / span 1;
+}
+
+.card i{
+font-size:42px;
+color:#c9a24d;
+display:block;
 margin-bottom:10px;
+}
+
+.card h3{
+margin:10px 0 0 0;
+font-size:18px;
+font-family:'Merriweather', serif;
+color:#0f2a44;
 }
 
 .card p{
@@ -307,9 +325,9 @@ color:#fff;
 .practice-details-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:20px;
+gap:18px;
 max-width:1100px;
-margin:18px auto;
+margin:8px auto;
 padding:0 20px;
 }
 
@@ -531,11 +549,12 @@ grid-column:span 1;
 /* HERO BANNER STYLE */
 
 .hero-banner{
-background:url('./images/hero-banner.png') no-repeat center center;
-background-size:contain;
-height:420px;
+background:url('./images/hero-banner.png') no-repeat center right;
+background-size:cover;
+height:480px;
+width:100%;
 position:relative;
-background-color:#0f2a44;
+overflow:hidden;
 }
 
 .hero-banner::before{
@@ -593,7 +612,7 @@ The information provided on this website is for general informational purposes o
 
 <div class="header-top">
 
-<img src="./images/logo.png" class="logo">
+<img src="./images/logo.png" class="logo" alt="Gaurav Saini & Associates Logo">
 
 <div class="header-title">
 <h1>Gaurav Saini & Associates</h1>
@@ -686,12 +705,22 @@ Legal Drafting & Opinions
 
 <div class="grid">
 
-<div class="card">Corporate & Commercial Clients</div>
-<div class="card">Businesses & Startups</div>
-<div class="card">Individual Clients</div>
-
+<div class="card">
+<i class="fa-solid fa-building"></i>
+<h3>Corporate & Commercial Clients</h3>
 </div>
 
+<div class="card">
+<i class="fa-solid fa-rocket"></i>
+<h3>Businesses & Startups</h3>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-user"></i>
+<h3>Individual Clients</h3>
+</div>
+
+</div>
 </section>
 
 <div class="practice-details-grid">
