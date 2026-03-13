@@ -137,27 +137,6 @@ border-bottom:2px solid #c9a24d;
 padding-bottom:3px;
 }
 
-.profile-wrapper{
-width:220px;
-height:220px;
-border-radius:50%;
-background:#f3f4f6;
-margin:40px auto 20px auto;
-display:flex;
-align-items:center;
-justify-content:center;
-box-shadow:0 10px 25px rgba(0,0,0,.25);
-border:6px solid white;
-}
-
-.profile-wrapper img{
- width:100%;
- height:100%;
- border-radius:50%;
- object-fit:cover;
- object-position:top;
-}
-
 #about{
 margin-top:10px;
 }
@@ -207,7 +186,13 @@ background:#091a2a;
 }
 
 section{
-padding:30px 20px;
+padding:25px 20px;
+}
+
+/* ADD THIS BELOW */
+
+#clients{
+padding-top:10px;
 }
 
 section p{
@@ -235,7 +220,7 @@ margin:12px auto 25px auto;
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:14px;
+gap:18px;
 max-width:1100px;
 margin:20px auto;
 padding:0 20px;
@@ -309,9 +294,13 @@ margin-bottom:8px;
 margin-bottom:8px;
 }
 
-.practice-detail p{
-margin-top:4px;
+.practice-detail p,
+.card p{
+font-family:'Source Sans Pro', sans-serif;
+font-size:15px;
 line-height:1.6;
+color:#1f2937;
+margin-top:4px;
 }
 
 @media(max-width:900px){
@@ -575,10 +564,6 @@ The information provided on this website is for general informational purposes o
 
 <section class="hero-banner"></section>
 
-<div class="profile-wrapper">
-<img src="./images/gaurav.jpg" alt="Advocate Gaurav Saini">
-</div>
-
 <section id="about">
 
 <h2>About the Firm</h2>
@@ -655,7 +640,7 @@ Legal Drafting & Opinions
 
 <div class="grid">
 
-<div class="card">Courts & Tribunals</div>
+<div class="card">Corporate & Commercial Clients</div>
 <div class="card">Businesses & Startups</div>
 <div class="card">Individual Clients</div>
 
