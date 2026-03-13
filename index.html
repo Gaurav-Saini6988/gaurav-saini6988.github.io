@@ -108,6 +108,13 @@ font-size:26px;
 color:#c9a24d;
 cursor:pointer;
 z-index:1001;
+display:none;
+}
+
+@media(max-width:768px){
+.menu-toggle{
+display:block;
+}
 }
 
 /* DESKTOP NAVIGATION */
@@ -251,6 +258,10 @@ padding:0 20px;
 justify-items:center;
 }
 
+.services .grid{
+justify-content:center;
+}
+
 @media(max-width:768px){
 .grid{
 grid-template-columns:1fr;
@@ -270,6 +281,7 @@ align-items:center;
 gap:16px;
 box-shadow:0 8px 20px rgba(0,0,0,0.08);
 font-weight:600;
+min-height:90px;
 }
 
 #clients .card{
@@ -277,19 +289,19 @@ display:block;
 text-align:center;
 }
 
-.grid .card:nth-last-child(2){
-grid-column:1 / span 1;
+#clients .grid .card:nth-last-child(2){
+grid-column:2;
 }
 
-.grid .card:last-child{
-grid-column:2 / span 1;
-}
+#clients .grid .card:last-child{
+grid-column:3;
+}	
 
 .card i{
-font-size:42px;
+font-size:36px;
 color:#c9a24d;
-display:block;
-margin-bottom:10px;
+min-width:40px;
+text-align:center;
 }
 
 .card h3{
@@ -549,12 +561,13 @@ grid-column:span 1;
 /* HERO BANNER STYLE */
 
 .hero-banner{
-background:url('./images/hero-banner.png') no-repeat center right;
-background-size:cover;
+background:url('./images/hero-banner.png') no-repeat center center;
+background-size:contain;
 height:480px;
 width:100%;
 position:relative;
 overflow:hidden;
+background-color:#0f2a44;
 }
 
 .hero-banner::before{
