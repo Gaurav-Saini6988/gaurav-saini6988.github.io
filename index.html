@@ -63,7 +63,7 @@ border-bottom:3px solid #c9a24d;
 .header-top{
 display:flex;
 align-items:center;
-justify-content:flex-start;
+justify-content:space-between;
 max-width:1200px;
 margin:0 auto;
 position:relative;
@@ -109,17 +109,47 @@ color:#c9a24d;
 cursor:pointer;
 }
 
+/* DESKTOP NAVIGATION */
+
 .main-nav{
-flex-direction:column;
-align-items:center;
-display:none;
+display:flex;
+justify-content:center;
+gap:30px;
 background:#0f2a44;
-padding:20px 0;
+padding:10px 0;
 border-top:1px solid rgba(255,255,255,0.1);
+}
+
+.main-nav a{
+color:#c9a24d;
+text-decoration:none;
+font-weight:600;
+font-size:16px;
+}
+
+.main-nav a:hover{
+color:#fff;
+border-bottom:2px solid #c9a24d;
+}
+
+/* MOBILE NAVIGATION */
+
+@media(max-width:768px){
+
+.main-nav{
+display:none;
+flex-direction:column;
+gap:12px;
 }
 
 .main-nav.active{
 display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
+
 }
 
 .main-nav a{
@@ -186,7 +216,7 @@ background:#091a2a;
 }
 
 section{
-padding:25px 20px;
+padding:60px 20px;
 }
 
 /* ADD THIS BELOW */
@@ -220,9 +250,9 @@ margin:12px auto 25px auto;
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:18px;
+gap:20px;
 max-width:1100px;
-margin:20px auto;
+margin:40px auto;
 padding:0 20px;
 }
 
@@ -279,7 +309,7 @@ display:grid;
 grid-template-columns:1fr 1fr;
 gap:20px;
 max-width:1100px;
-margin:20px auto;
+margin:40px auto;
 padding:0 20px;
 }
 
@@ -367,6 +397,28 @@ border-radius:50%;
 text-decoration:none;
 box-shadow:0 4px 10px rgba(0,0,0,0.3);
 z-index:1000;
+}
+
+.linkedin-button{
+position:fixed;
+bottom:90px;
+right:20px;
+background:#0077B5;
+color:white;
+font-size:24px;
+width:55px;
+height:55px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+z-index:1000;
+}
+
+.linkedin-button:hover{
+background:#005582;
 }
 
 .whatsapp-button:hover{
@@ -481,7 +533,7 @@ grid-column:span 1;
 .hero-banner{
 background:url('./images/hero-banner.png') no-repeat center;
 background-size:cover;
-min-height:520px;
+min-height:400px;
 position:relative;
 }
 
@@ -540,7 +592,7 @@ The information provided on this website is for general informational purposes o
 
 <div class="header-top">
 
-<img src="./images/logo.png" class="logo" alt="Gaurav Saini & Associates Logo">
+<img src="./images/logo.png" class="logo">
 
 <div class="header-title">
 <h1>Gaurav Saini & Associates</h1>
@@ -552,6 +604,7 @@ The information provided on this website is for general informational purposes o
 </div>
 
 </div>
+
 <nav class="main-nav">
 <a href="#about">About</a>
 <a href="#practice">Practice Areas</a>
@@ -872,6 +925,10 @@ disclaimer.style.display = "none";
 });
 
 </script>
+
+<a href="https://linkedin.com/in/gaurav-saini-associates" class="linkedin-button" target="_blank">
+<i class="fa-brands fa-linkedin"></i>
+</a>
 
 <a href="https://wa.me/919811273738" class="whatsapp-button" target="_blank">
 <i class="fa-brands fa-whatsapp"></i>
