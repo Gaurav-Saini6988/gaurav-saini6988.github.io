@@ -278,7 +278,7 @@ text-decoration:none;
 color:#1f2937;
 transition:.3s;
 display:flex;
-align-items:center;
+align-items:flex-start;
 gap:16px;
 box-shadow:0 8px 20px rgba(0,0,0,0.08);
 }
@@ -571,6 +571,25 @@ font-size:18px;
 max-width:600px;
 }
 
+@media(max-width:768px){
+
+.header-top{
+flex-direction:column;
+align-items:center;
+text-align:center;
+}
+
+.header-title{
+position:static;
+transform:none;
+margin-top:10px;
+}
+
+.logo{
+width:180px;
+}
+
+}
 </style>
 </head>
 
@@ -645,7 +664,7 @@ Gaurav Saini & Associates is a New Delhi based law firm providing litigation, ad
 
 <a href="#civil" class="card">
 <i class="fa-solid fa-scale-balanced"></i>
-Civil & Criminal Litigation
+<span>Civil & Criminal Litigation</span>
 </a>
 
 <a href="#labour" class="card">
@@ -655,32 +674,32 @@ Labour & Service Law
 
 <a href="#corporate" class="card">
 <i class="fa-solid fa-building"></i>
-Corporate & Commercial Advisory
+<span>Corporate & Commercial Advisory<span>
 </a>
 
 <a href="#tax" class="card">
 <i class="fa-solid fa-chart-line"></i>
-Tax, Risk & Regulatory Compliance
+<span>Tax, Risk & Regulatory Compliance<span>
 </a>
 
 <a href="#ipr" class="card">
 <i class="fa-solid fa-lightbulb"></i>
-Intellectual Property Rights
+<span>Intellectual Property Rights<span>
 </a>
 
 <a href="#realestate" class="card">
 <i class="fa-solid fa-house"></i>
-Real Estate & Property Law
+<span>Real Estate & Property Law<span>
 </a>
 
 <a href="#adr" class="card">
 <i class="fa-solid fa-handshake"></i>
-Arbitration & Mediation
+<span>Arbitration & Mediation<span>
 </a>
 
 <a href="#drafting" class="card">
 <i class="fa-solid fa-file-contract"></i>
-Legal Drafting & Opinions
+<span>Legal Drafting & Opinions<span>
 </a>
 
 </div>
