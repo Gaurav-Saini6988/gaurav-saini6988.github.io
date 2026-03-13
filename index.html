@@ -260,9 +260,38 @@ grid-template-columns:1fr;
  border:0;
 }
 
+.footer-logo{
+width:140px;
+margin-bottom:8px;
+}
+
 footer{
- background:#0f2a44;color:#fff;text-align:center;
- padding:18px;font-size:14px;
+background:#0f2a44;color:#fff;text-align:center;
+padding:18px;font-size:14px;
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp-button{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:26px;
+width:55px;
+height:55px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+z-index:1000;
+}
+
+.whatsapp-button:hover{
+background:#1ebe5d;
 }
 
 /* PROFESSIONAL DISCLAIMER POPUP */
@@ -616,6 +645,10 @@ disclaimer.style.display = "none";
 });
 
 </script>
+
+<a href="https://wa.me/919811273738" class="whatsapp-button" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
