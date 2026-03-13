@@ -39,16 +39,8 @@ box-sizing:border-box;
 html{scroll-behavior:smooth;}
 body{
 margin:0;
+overflow-x:hidden;
 font-family:'Source Sans Pro', sans-serif;
-color:#1f2937;
-line-height:1.7;
-}
-
-html{scroll-behavior:smooth;}
-
-body{
-margin:0;
-font-family:'Lato', sans-serif;
 color:#1f2937;
 line-height:1.7;
 }
@@ -71,12 +63,12 @@ border-bottom:3px solid #c9a24d;
 .header-top{
 display:flex;
 align-items:center;
+justify-content:flex-start;
 max-width:1200px;
-margin:auto;
+margin:0 auto;
 position:relative;
+padding:0 20px;
 }
-
-
 
 /* LOGO */
 
@@ -88,8 +80,8 @@ width:230px;
 
 .header-title{
 position:absolute;
-left:0;
-right:0;
+left:50%;
+transform:translateX(-50%);
 text-align:center;
 }
 
