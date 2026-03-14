@@ -82,7 +82,7 @@ scroll-behavior:smooth;
 
 section{
 padding:60px 20px;
-scroll-margin-top:170px;
+scroll-margin-top:190px;
 }
 
 body{
@@ -241,11 +241,7 @@ color:#fff;
 border-bottom:2px solid #c9a24d;
 padding-bottom:3px;
 }
-
-#about{
-margin-top:10px;
-}
-
+	
 /* HERO CAREER FORM */
 
 .hero-career{
@@ -1276,7 +1272,7 @@ let current = "";
 
 sections.forEach(section => {
 
-const sectionTop = section.offsetTop - 50;
+const sectionTop = section.offsetTop - 200;
 const sectionHeight = section.offsetHeight;
 
 if(window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight){
