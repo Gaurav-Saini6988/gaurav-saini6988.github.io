@@ -322,9 +322,10 @@ margin:6px auto 12px auto;
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
-gap:20px;
-max-width:1100px;
+grid-template-columns:repeat(auto-fit, minmax(220px,260px));
+justify-content:center;
+gap:18px;
+max-width:1000px;
 margin:20px auto;
 padding:0 20px;
 }
@@ -335,17 +336,18 @@ justify-content:center;
 
 .card{
 background:#fff;
-padding:14px;
+padding:12px;
 border-radius:6px;
 border-top:4px solid #c9a24d;
 text-decoration:none;
 color:#1f2937;
-transition:.3s;
+transition:all .3s ease;
 display:flex;
 flex-direction:column;
 align-items:flex-start;
-gap:6px;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
+gap:5px;
+box-shadow:0 6px 16px rgba(0,0,0,0.08);
+cursor:pointer;
 }
 
 #clients .card{
@@ -358,20 +360,20 @@ padding:12px 16px;
 }
 
 .card i{
-font-size:36px;
+font-size:34px;
 color:#c9a24d;
-margin-bottom:5px;
+margin-bottom:3px;
 }
 
 .card span{
 font-weight:600;
 font-size:16px;
-font-family:'Merriweather', serif;
-color:#0f2a44;
+font-family:'Source Sans Pro', sans-serif;
+color:#1f2937;
 }
 
 .card h3{
-margin:10px 0 0 0;
+margin:6px 0 0 0;
 font-size:16px;
 font-weight:600;
 font-family:'Source Sans Pro', sans-serif;
@@ -394,12 +396,8 @@ color:#fff;
 transform:translateY(-5px);
 }
 
-.card:hover p{
-color:#fff;
-}
-
-.card:hover i{
-color:#fff;
+.card:hover *{
+color:#fff !important;
 }
 
 .practice-details-grid{
@@ -747,7 +745,7 @@ The information provided on this website is for general informational purposes o
 <main>
 
 <section class="hero-banner">
-<img src="./images/hero-banner.png" alt="Gaurav Saini Advocate & Legal Consultant New Delhi" loading="eager">
+<img src="./images/hero-banner.png" alt="Gaurav Saini & Associates – Advocate and Legal Consultant in New Delhi">
 </section>
 
 <section id="about">
@@ -1186,7 +1184,7 @@ link.classList.add("active");
 
 </script>
 
-<<a href="https://linkedin.com/in/gaurav-saini-associates" class="linkedin-button" target="_blank" rel="noopener noreferrer">
+<a href="https://linkedin.com/in/gaurav-saini-associates" class="linkedin-button" target="_blank" rel="noopener noreferrer">
 <i class="fa-brands fa-linkedin"></i>
 </a>
 
