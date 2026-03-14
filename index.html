@@ -328,6 +328,7 @@ gap:18px;
 max-width:1000px;
 margin:20px auto;
 padding:0 20px;
+align-items:stretch;
 }
 
 .services .grid{
@@ -345,11 +346,28 @@ transition:all .3s ease;
 display:flex;
 flex-direction:column;
 align-items:flex-start;
-justify-content:center;
 gap:5px;
 box-shadow:0 6px 16px rgba(0,0,0,0.08);
 cursor:pointer;
 min-height:90px;
+height:100%;
+}
+
+/* ADD THIS BELOW */
+
+#approach .card{
+display:flex;
+flex-direction:row;
+align-items:flex-start;
+gap:15px;
+min-height:150px;
+padding:20px;
+}
+
+#approach .card i{
+font-size:36px;
+margin-top:4px;
+flex-shrink:0;
 }
 
 #clients .card{
@@ -774,26 +792,32 @@ The firm adopts a professional and methodical approach to legal practice with em
 
 <div class="card">
 <i class="fa-solid fa-scale-balanced"></i>
+<div>
 <h3>Professional Integrity</h3>
 <p>
 The firm conducts its practice in accordance with the professional standards and ethical principles prescribed by the Bar Council of India, ensuring responsible and principled legal representation.
 </p>
 </div>
+</div>
 
 <div class="card">
 <i class="fa-solid fa-file-contract"></i>
+<div>
 <h3>Careful Legal Analysis</h3>
 <p>
 Each matter is approached through detailed examination of the relevant facts, documentation, and applicable legal framework in order to provide well-reasoned legal advice.
 </p>
 </div>
+</div>
 
 <div class="card">
 <i class="fa-solid fa-handshake"></i>
+<div>
 <h3>Practical Legal Solutions</h3>
 <p>
 The firm focuses on providing clear and practical legal guidance that assists clients in understanding their legal position and available courses of action.
 </p>
+</div>
 </div>
 
 </div>
