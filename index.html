@@ -265,14 +265,17 @@ header {
 /* ─── HERO SECTION ─── */
 .hero-section {
   position: relative;
-  overflow: hidden;
   background: var(--navy);
+  line-height: 0;
+  padding: 0 !important;
+  margin: 0;
 }
 .hero-section img.hero-img {
   width: 100%;
   height: auto;
   display: block;
   opacity: 1;
+  vertical-align: top;
 }
 .hero-overlay {
   position: absolute;
@@ -852,7 +855,7 @@ footer {
 <main>
 
 <!-- HERO -->
-<section class="hero-section" style="padding:0; scroll-margin-top:0;">
+<section class="hero-section" style="padding:0; margin-top:0; scroll-margin-top:0;">
   <img class="hero-img" src="./images/hero-banner.png" alt="Gaurav Saini & Associates — Advocates & Legal Consultants, New Delhi">
 </section>
 
