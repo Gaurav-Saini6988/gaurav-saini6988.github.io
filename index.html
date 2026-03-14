@@ -80,8 +80,11 @@ html{
 scroll-behavior:smooth;
 }
 
+/* =============================================
+   GLOBAL SECTION SPACING — consistent 70px top/bottom
+   ============================================= */
 section{
-padding:70px 20px;
+padding:25px 20px 10px 20px;
 scroll-margin-top:170px;
 }
 
@@ -241,7 +244,7 @@ color:#fff;
 border-bottom:2px solid #c9a24d;
 padding-bottom:3px;
 }
-	
+
 /* HERO CAREER FORM */
 
 .hero-career{
@@ -286,27 +289,18 @@ margin-top:10px;
 background:#091a2a;
 }
 
-#practice{
-padding-top:10px;
-}
+/* =============================================
+   REMOVED the padding-top:10px overrides for
+   #practice, #approach, #clients — they now
+   inherit the consistent 70px from section {}
+   ============================================= */
 
-/* ADD BELOW THIS */
-
-#approach{
-padding-top:10px;
-}
-
-/* Fix for sticky header navigation */
-
-/* ADD THIS BELOW */
-
-#clients{
-padding-top:10px;
-}
-
+/* =============================================
+   PARAGRAPH SPACING — more breathing room
+   ============================================= */
 section p{
 max-width:820px;
-margin:8px auto 14px auto;
+margin:0 auto 20px auto;   /* was: 8px auto 14px — too tight */
 line-height:1.8;
 font-size:15px;
 text-align:justify;
@@ -322,16 +316,18 @@ margin-top:0;
 margin-bottom:8px;
 }
 
+/* =============================================
+   GOLD LINE — more space below before content
+   ============================================= */
 .gold-line{
 width:70px;
 height:3px;
 background:#c9a24d;
-margin:8px auto 20px auto;
+margin:8px auto 30px auto;  /* was: 8px auto 20px — too tight */
 }
 
 .services{
 background:#f3f4f6;
-margin-top:40px;
 }
 
 .grid{
@@ -371,8 +367,6 @@ height:100%;
 transition:transform .25s ease, background .25s ease;
 }
 
-/* ADD THIS BELOW */
-
 #practice .card{
 display:flex;
 flex-direction:row;
@@ -384,8 +378,6 @@ min-height:70px;
 #practice .card span{
 flex:1;
 }
-
-/* ADD THIS BELOW */
 
 #approach .card{
 display:flex;
@@ -475,7 +467,7 @@ color:#1f2937;
 margin-top:10px;
 text-align:left;
 }
-	
+
 .card:hover{
 background:#0f2a44;
 color:#fff;
@@ -487,35 +479,76 @@ box-shadow:0 14px 30px rgba(0,0,0,0.18);
 color:#fff !important;
 }
 
+/* =============================================
+   PRACTICE DETAILS GRID — consistent spacing
+   ============================================= */
 .practice-details-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:18px;
+gap:0px 30px;
 max-width:1100px;
-margin:10px auto;
-padding:0 20px;
+margin:0 auto;
+padding:25px 20px 10px 20px;
 }
 
 .practice-detail{
 text-align:left;
-padding-bottom:4px;
+padding:24px 0 16px 0;
 border-bottom:2px solid #c9a24d;
-margin-bottom:4px;
 scroll-margin-top:200px;
-}	
+}
 
 .practice-detail h2{
-margin-bottom:4px;
+margin-bottom:10px;    /* was: 4px — heading too close to paragraph */
+font-size:22px;        /* slightly smaller so it reads as sub-heading */
+text-align:left;
 }
 
 .practice-detail p,
 .card p{
 font-family:'Source Sans Pro', sans-serif;
 font-size:15px;
-line-height:1.7;
+line-height:1.8;       /* was: 1.7 — slightly more open */
 color:#1f2937;
-margin-top:10px;
+margin-top:0;          /* was: 10px — heading margin handles the gap */
 text-align:justify;
+}
+
+/* =============================================
+   ABOUT SECTION paragraphs — consistent gap
+   ============================================= */
+#contact p{
+margin:0 auto 6px auto;
+line-height:1.6;
+max-width:820px;
+}
+
+.contact-details{
+max-width:820px;
+margin:0 auto 20px auto;
+text-align:left;
+}
+
+.contact-details p{
+margin:0 0 8px 0;
+line-height:1.6;
+text-align:left;
+font-size:15px;
+}
+
+/* =============================================
+   STANDARDS SECTION — consistent paragraph gap
+   ============================================= */
+#standards p{
+margin-bottom:20px;
+}
+
+/* =============================================
+   CLIENTS SECTION — consistent paragraph gap
+   ============================================= */
+#clients .card p{
+margin-top:8px;
+margin-bottom:0;
 }
 
 .map-box{
@@ -643,7 +676,7 @@ margin-top:15px;
 font-weight:bold;
 }
 
-/* CAREER SECTION PROFESSIONAL */
+/* CAREER SECTION */
 
 .career-section{
 background:#f3f4f6;
@@ -653,7 +686,7 @@ padding:60px 20px;
 .career-container{
 max-width:900px;
 margin:20px auto;
-padding:0 20px;
+padding:30px;           /* was: 0 20px — no internal padding, looked cramped */
 background:#fff;
 border-radius:6px;
 box-shadow:0 8px 25px rgba(0,0,0,.12);
@@ -752,8 +785,6 @@ margin-top:10px;
 width:180px;
 }
 
-/* ADD THIS */
-
 .footer-container{
 flex-direction:column;
 text-align:center;
@@ -770,10 +801,13 @@ margin-top:5px;
 width:160px;
 }
 
-/* ADD THIS BELOW */
-
-#standards{
-margin-top:40px;
+/* =============================================
+   MOBILE: stack practice details to 1 column
+   ============================================= */
+.practice-details-grid{
+grid-template-columns:1fr;
+gap:0;
+padding:30px 20px 10px 20px;
 }
 
 }
@@ -988,7 +1022,7 @@ The information contained on this website is intended solely for general informa
 </div>
 </section>
 
-<section class="practice-details-grid">
+<div class="practice-details-grid">
 <section id="civil" class="practice-detail">
 <h2>Civil & Criminal Litigation</h2>
 <p>
@@ -1061,7 +1095,7 @@ The drafting process emphasizes clarity, legal accuracy, and enforceability of c
 </p>
 </section>
 
-</section>   <!-- CLOSE practice-details-grid -->
+</div>   <!-- CLOSE practice-details-grid -->
 
 <section id="clients" class="services">
 
@@ -1159,7 +1193,7 @@ Representation and advisory services in civil, criminal, property, and other leg
 <h2>Careers</h2>
 <div class="gold-line"></div>
 
-<p style="text-align:center;max-width:900px;margin:auto;">
+<p style="text-align:center;max-width:900px;margin:0 auto 30px auto;">
 Applications are invited from law students and legal professionals interested in internship or associate positions.
 </p>
 
@@ -1219,14 +1253,12 @@ Applications are invited from law students and legal professionals interested in
 <h2>Contact</h2>
 <div class="gold-line"></div>
 
+<div class="contact-details">
 <p>📍 472-A, Hardev Puri, Gautam Nagar, New Delhi – 110049</p>
 <p>📞 +91-9811273738</p>
 <p>✉️ <a href="mailto:gaurav@sainilegal.in">gaurav@sainilegal.in</a></p>
-<p>
-<a href="https://linkedin.com/in/gaurav-saini-associates" target="_blank" rel="noopener noreferrer">
-<i class="fa-brands fa-linkedin"></i> LinkedIn
-</a>
-</p>
+<p><a href="https://linkedin.com/in/gaurav-saini-associates" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></p>
+</div>
 
 <div class="map-box">
 <iframe loading="lazy" src="https://www.google.com/maps?q=472-A%20Hardev%20Puri%20Gautam%20Nagar%20New%20Delhi%20110049&output=embed"></iframe>
