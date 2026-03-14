@@ -355,6 +355,20 @@ height:100%;
 
 /* ADD THIS BELOW */
 
+#practice .card{
+display:flex;
+flex-direction:row;
+align-items:flex-start;
+gap:12px;
+min-height:70px;
+}
+
+#practice .card span{
+flex:1;
+}
+
+/* ADD THIS BELOW */
+
 #approach .card{
 display:flex;
 flex-direction:row;
@@ -380,9 +394,10 @@ padding:12px 16px;
 }
 
 .card i{
-font-size:34px;
+font-size:30px;
 color:#c9a24d;
-margin-bottom:3px;
+margin-bottom:0;
+flex-shrink:0;
 }
 
 .card span{
