@@ -196,6 +196,12 @@ padding:4px 0;
 margin:2px 0;
 }
 
+/* Active navigation highlight */
+.main-nav a.active{
+color:#fff;
+border-bottom:2px solid #c9a24d;
+}
+
 @media(max-width:768px){
 
 .main-nav{
@@ -273,6 +279,11 @@ background:#091a2a;
 
 section:not(.hero-banner){
 padding:14px 20px;
+}
+
+/* Fix for sticky header navigation */
+section{
+scroll-margin-top:120px;
 }
 /* ADD THIS BELOW */
 
@@ -393,6 +404,7 @@ text-align:left;
 padding-bottom:4px;
 border-bottom:2px solid #c9a24d;
 margin-bottom:4px;
+scroll-margin-top:120px;
 }	
 
 .practice-detail h2{
@@ -1011,6 +1023,12 @@ function toggleMenu(){
 document.querySelector(".main-nav").classList.toggle("active");
 }
 
+document.querySelectorAll(".main-nav a").forEach(link => {
+link.addEventListener("click", () => {
+document.querySelector(".main-nav").classList.remove("active");
+});
+});
+
 document.addEventListener("DOMContentLoaded", function(){
 
 const disclaimer = document.getElementById("disclaimer");
@@ -1023,6 +1041,35 @@ window.acceptDisclaimer = function(){
 localStorage.setItem("bciDisclaimer","accepted");
 disclaimer.style.display = "none";
 };
+
+});
+
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".main-nav a");
+
+window.addEventListener("scroll", () => {
+
+let current = "";
+
+sections.forEach(section => {
+
+const sectionTop = section.offsetTop - 150;
+const sectionHeight = section.offsetHeight;
+
+if(window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight){
+current = section.getAttribute("id");
+}
+
+});
+
+navLinks.forEach(link => {
+link.classList.remove("active");
+
+if(link.getAttribute("href") === "#" + current){
+link.classList.add("active");
+}
+
+});
 
 });
 
