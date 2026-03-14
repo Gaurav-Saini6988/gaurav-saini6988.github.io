@@ -76,7 +76,10 @@
 box-sizing:border-box;
 }
 
-html{scroll-behavior:smooth;}
+html{
+scroll-behavior:smooth;
+scroll-padding-top:150px;
+}
 body{
 margin:0;
 overflow-x:hidden;
@@ -294,8 +297,8 @@ padding-top:10px;
 
 /* Fix for sticky header navigation */
 section:not(.hero-banner){
-scroll-margin-top:120px;
-padding:20px 20px;
+scroll-margin-top:150px;
+padding:25px 20px;
 }
 
 /* ADD THIS BELOW */
@@ -305,9 +308,9 @@ padding-top:10px;
 }
 
 section p{
-max-width:950px;
-margin:8px auto;
-line-height:1.7;
+max-width:900px;
+margin:10px auto;
+line-height:1.85;
 text-align:justify;
 text-justify:inter-word;
 }
@@ -349,7 +352,7 @@ border-radius:6px;
 border-top:4px solid #c9a24d;
 text-decoration:none;
 color:#1f2937;
-transition:all .3s ease;
+transition:all .25s ease;
 display:flex;
 flex-direction:column;
 align-items:flex-start;
@@ -480,7 +483,7 @@ text-align:left;
 padding-bottom:4px;
 border-bottom:2px solid #c9a24d;
 margin-bottom:4px;
-scroll-margin-top:120px;
+scroll-margin-top:150px;
 }	
 
 .practice-detail h2{
