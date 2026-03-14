@@ -78,8 +78,13 @@ box-sizing:border-box;
 
 html{
 scroll-behavior:smooth;
-scroll-padding-top:150px;
+scroll-padding-top:170px;
 }
+
+section{
+padding:40px 20px;
+}
+
 body{
 margin:0;
 overflow-x:hidden;
@@ -296,10 +301,6 @@ padding-top:10px;
 }
 
 /* Fix for sticky header navigation */
-section:not(.hero-banner){
-scroll-margin-top:150px;
-padding:25px 20px;
-}
 
 /* ADD THIS BELOW */
 
@@ -382,16 +383,25 @@ flex:1;
 #approach .card{
 display:flex;
 flex-direction:row;
-align-items:center;
-gap:15px;
-min-height:150px;
-padding:20px;
+align-items:flex-start;
+gap:16px;
+min-height:160px;
+padding:22px;
 }
 
 #approach .card i{
 font-size:34px;
 flex-shrink:0;
-margin-top:2px;
+margin-top:4px;
+color:#c9a24d;
+}
+
+#approach .card div{
+flex:1;
+}
+
+#approach .card h3{
+margin:0 0 6px 0;
 }
 
 #clients .card{
@@ -483,7 +493,6 @@ text-align:left;
 padding-bottom:4px;
 border-bottom:2px solid #c9a24d;
 margin-bottom:4px;
-scroll-margin-top:150px;
 }	
 
 .practice-detail h2{
