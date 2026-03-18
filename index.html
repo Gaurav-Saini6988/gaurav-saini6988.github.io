@@ -277,64 +277,22 @@ header {
   opacity: 1;
   vertical-align: top;
 }
-.hero-btn-wrap {
-  position: absolute;
-  bottom: 5%;
-  left: 4%;
-}
-.hero-btn {
-  display: inline-block;
-  background: rgba(255,255,255,0.08);
-  border: 2px solid #c9a24d;
-  color: #ffffff;
-  font-family: 'Crimson Pro', Georgia, serif;
-  font-size: 17px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 14px 32px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  line-height: 1;
-}
-.hero-btn:hover {
-  background: #c9a24d;
-  color: #0b1e33;
-}
-.hero-btn {
-  display: inline-block;
-  background: transparent;
-  border: 2px solid #c9a24d;
-  color: #c9a24d;
-  font-family: 'Crimson Pro', Georgia, serif;
-  font-size: 17px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 14px 32px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  line-height: 1;
-}
-.hero-btn:hover {
-  background: #c9a24d;
-  color: #0b1e33;
-}
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(11,30,51,0.85) 0%,
-    rgba(11,30,51,0.4) 60%,
-    rgba(11,30,51,0.7) 100%
+    rgba(11,30,51,0.88) 0%,
+    rgba(11,30,51,0.45) 60%,
+    rgba(11,30,51,0.72) 100%
   );
   display: flex;
   align-items: center;
   padding: 0 60px;
+  line-height: 1.75;
 }
 .hero-text {
-  max-width: 620px;
+  max-width: 580px;
   animation: fadeUp 0.8s ease both;
 }
 .hero-text .hero-tag {
@@ -343,23 +301,24 @@ header {
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   display: flex;
   align-items: center;
   gap: 12px;
 }
 .hero-text .hero-tag::before {
   content: '';
-  width: 40px;
+  width: 36px;
   height: 1px;
   background: var(--gold);
+  flex-shrink: 0;
 }
 .hero-text h2 {
   font-family: var(--serif);
-  font-size: 52px;
+  font-size: 54px;
   font-weight: 600;
   color: var(--white);
-  line-height: 1.15;
+  line-height: 1.12;
   margin-bottom: 18px;
   text-align: left;
   letter-spacing: 0.5px;
@@ -370,25 +329,25 @@ header {
 }
 .hero-text p {
   font-size: 17px;
-  color: rgba(255,255,255,0.82);
-  line-height: 1.75;
+  color: rgba(255,255,255,0.84);
+  line-height: 1.78;
   margin-bottom: 28px;
   text-align: left;
-  max-width: 500px;
+  max-width: 480px;
 }
 .hero-cta {
   display: inline-flex;
   align-items: center;
   gap: 10px;
   background: transparent;
-  border: 1px solid var(--gold);
+  border: 1.5px solid var(--gold);
   color: var(--gold);
   font-family: var(--body);
   font-size: 13px;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-  padding: 13px 28px;
+  padding: 14px 30px;
   text-decoration: none;
   transition: var(--transition);
 }
@@ -484,7 +443,7 @@ section p {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 14px;
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 10px;
@@ -584,18 +543,19 @@ section p {
 #clients .card {
   flex-direction: row;
   align-items: flex-start;
-  gap: 16px;
-  padding: 22px 20px;
+  gap: 14px;
+  padding: 14px 16px;
 }
 #clients .card i { margin-top: 3px; }
 #clients .card div { flex: 1; }
 #clients .card h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
+  font-size: 17px;
+  margin-bottom: 4px;
 }
 #clients .card p {
-  font-size: 15px;
+  font-size: 14px;
   margin: 0;
+  line-height: 1.65;
 }
 
 /* ─── PRACTICE DETAIL GRID ─── */
@@ -605,11 +565,11 @@ section p {
   gap: 0 40px;
   max-width: 1120px;
   margin: 0 auto;
-  padding: 50px 30px 20px;
+  padding: 24px 30px 10px;
   background: var(--white);
 }
 .practice-detail {
-  padding: 28px 0 20px 0;
+  padding: 14px 0 12px 0;
   border-bottom: 1px solid rgba(201,162,77,0.3);
   scroll-margin-top: 140px;
 }
@@ -835,10 +795,10 @@ footer {
   .main-nav.active { display: flex; }
   .main-nav a { padding: 10px 20px; font-size: 12px; }
 
-  .hero-overlay { padding: 0 24px; }
-  .hero-text h2 { font-size: 32px; }
-  .hero-text p { font-size: 15px; }
-  .hero-section img.hero-img { width: 100%; height: auto; }
+  .hero-overlay { padding: 0 24px; align-items: flex-end; padding-bottom: 32px; }
+  .hero-text h2 { font-size: 30px; }
+  .hero-text p { font-size: 14px; margin-bottom: 20px; }
+  .hero-text { max-width: 100%; }
 
   section { padding: 40px 20px 24px; }
 
@@ -900,8 +860,13 @@ footer {
 <!-- HERO -->
 <section class="hero-section" style="padding:0; margin-top:0; scroll-margin-top:0;">
   <img class="hero-img" src="./images/hero-banner.png" alt="Gaurav Saini & Associates — Advocates & Legal Consultants, New Delhi">
-  <div class="hero-btn-wrap">
-    <a href="#about" class="hero-btn">Discover the Firm &nbsp;&#8594;</a>
+  <div class="hero-overlay">
+    <div class="hero-text">
+      <span class="hero-tag">Advocates &amp; Legal Consultants &ndash; New Delhi</span>
+      <h2>Gaurav Saini<br>&amp; <em>Associates</em></h2>
+      <p>Strategic legal representation and advisory services for individuals, businesses and institutions in New Delhi.</p>
+      <a href="#about" class="hero-cta">Discover the Firm &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+    </div>
   </div>
 </section>
 
