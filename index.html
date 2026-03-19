@@ -274,19 +274,33 @@ header {
   width: 100%;
   height: auto;
   display: block;
-  opacity: 1;
   vertical-align: top;
 }
-.hero-overlay-unused {
-  display: none;
+/* Strong left-side gradient that fully covers the baked-in image text,
+   fading to transparent on the right so the portrait remains visible */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(11,30,51,0.97) 0%,
+    rgba(11,30,51,0.97) 38%,
+    rgba(11,30,51,0.75) 55%,
+    rgba(11,30,51,0.20) 75%,
+    rgba(11,30,51,0.00) 100%
+  );
+  display: flex;
+  align-items: center;
+  padding: 0 56px;
+  line-height: 1.75;
 }
 .hero-text {
-  max-width: 580px;
+  max-width: 560px;
   animation: fadeUp 0.8s ease both;
 }
 .hero-text .hero-tag {
   font-family: var(--body);
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--gold);
@@ -304,25 +318,25 @@ header {
 }
 .hero-text h2 {
   font-family: var(--serif);
-  font-size: 54px;
+  font-size: 48px;
   font-weight: 600;
   color: var(--white);
-  line-height: 1.12;
-  margin-bottom: 18px;
+  line-height: 1.14;
+  margin-bottom: 16px;
   text-align: left;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
 }
 .hero-text h2 em {
   font-style: italic;
   color: var(--gold-light);
 }
 .hero-text p {
-  font-size: 17px;
-  color: rgba(255,255,255,0.84);
+  font-size: 16px;
+  color: rgba(255,255,255,0.82);
   line-height: 1.78;
   margin-bottom: 28px;
   text-align: left;
-  max-width: 480px;
+  max-width: 440px;
 }
 .hero-cta {
   display: inline-flex;
@@ -332,11 +346,11 @@ header {
   border: 1.5px solid var(--gold);
   color: var(--gold);
   font-family: var(--body);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  padding: 14px 30px;
+  padding: 13px 28px;
   text-decoration: none;
   transition: var(--transition);
 }
@@ -345,14 +359,6 @@ header {
   color: var(--navy);
 }
 .hero-cta i { font-size: 11px; }
-
-/* ─── HERO BUTTON ONLY (no overlay text) ─── */
-.hero-btn-only {
-  position: absolute;
-  bottom: 18%;
-  left: 4%;
-  line-height: 1;
-}
 
 /* ─── SECTION BASE ─── */
 section {
@@ -434,6 +440,14 @@ section p {
   background: linear-gradient(160deg, #f5edd8 0%, #faf6ee 100%);
   border-top: 1px solid rgba(201,162,77,0.25);
   border-bottom: 1px solid rgba(201,162,77,0.25);
+}
+
+#clients {
+  padding-top: 36px;
+  padding-bottom: 28px;
+}
+#clients .section-header {
+  margin-bottom: 18px;
 }
 
 /* ─── GRID ─── */
@@ -540,19 +554,19 @@ section p {
 #clients .card {
   flex-direction: row;
   align-items: flex-start;
-  gap: 14px;
-  padding: 14px 16px;
+  gap: 12px;
+  padding: 11px 14px;
 }
-#clients .card i { margin-top: 3px; }
+#clients .card i { margin-top: 3px; font-size: 20px; }
 #clients .card div { flex: 1; }
 #clients .card h3 {
-  font-size: 17px;
-  margin-bottom: 4px;
+  font-size: 16px;
+  margin-bottom: 3px;
 }
 #clients .card p {
-  font-size: 14px;
+  font-size: 13px;
   margin: 0;
-  line-height: 1.65;
+  line-height: 1.55;
 }
 
 /* ─── PRACTICE DETAIL GRID ─── */
@@ -792,10 +806,10 @@ footer {
   .main-nav.active { display: flex; }
   .main-nav a { padding: 10px 20px; font-size: 12px; }
 
-  .hero-overlay { padding: 0 24px; align-items: flex-end; padding-bottom: 32px; }
-  .hero-text h2 { font-size: 30px; }
-  .hero-text p { font-size: 14px; margin-bottom: 20px; }
+  .hero-overlay { padding: 0 24px; background: linear-gradient(to right, rgba(11,30,51,0.96) 0%, rgba(11,30,51,0.96) 60%, rgba(11,30,51,0.5) 85%, rgba(11,30,51,0) 100%); }
   .hero-text { max-width: 100%; }
+  .hero-text h2 { font-size: 28px; }
+  .hero-text p { font-size: 14px; margin-bottom: 20px; }
 
   section { padding: 40px 20px 24px; }
 
@@ -857,8 +871,13 @@ footer {
 <!-- HERO -->
 <section class="hero-section" style="padding:0; margin-top:0; scroll-margin-top:0;">
   <img class="hero-img" src="./images/hero-banner.png" alt="Gaurav Saini & Associates — Advocates & Legal Consultants, New Delhi">
-  <div class="hero-btn-only">
-    <a href="#about" class="hero-cta">Discover the Firm &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+  <div class="hero-overlay">
+    <div class="hero-text">
+      <span class="hero-tag">Advocates &amp; Legal Consultants &ndash; New Delhi</span>
+      <h2>Litigation, Corporate<br>Advisory &amp; <em>Compliance</em></h2>
+      <p>Strategic legal representation and advisory services for individuals, businesses and institutions in New Delhi.</p>
+      <a href="#about" class="hero-cta">Discover the Firm &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+    </div>
   </div>
 </section>
 
