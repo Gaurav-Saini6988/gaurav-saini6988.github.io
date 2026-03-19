@@ -277,17 +277,17 @@ header {
   vertical-align: top;
 }
 /* Strong gradient covering full left+centre to hide baked-in image text */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: transparent;
+.hero-overlay-unused { display: none; }
+
+/* ─── HERO CTA BAR (sits below the banner image) ─── */
+.hero-cta-bar {
+  background: var(--navy);
   display: flex;
-  align-items: flex-end;
-  padding: 0 0 6% 4%;
-  line-height: 1;
-}
-.hero-cta-wrap {
-  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  padding: 22px 30px;
+  border-top: 1px solid rgba(201,162,77,0.25);
+  border-bottom: 1px solid rgba(201,162,77,0.25);
 }
 .hero-text {
   max-width: 560px;
@@ -336,16 +336,16 @@ header {
 .hero-cta {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   background: transparent;
   border: 1.5px solid var(--gold);
   color: var(--gold);
   font-family: var(--body);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 2.5px;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  padding: 13px 28px;
+  padding: 14px 36px;
   text-decoration: none;
   transition: var(--transition);
 }
@@ -353,7 +353,7 @@ header {
   background: var(--gold);
   color: var(--navy);
 }
-.hero-cta i { font-size: 11px; }
+.hero-cta i { font-size: 12px; }
 
 /* ─── SECTION BASE ─── */
 section {
@@ -869,12 +869,12 @@ footer {
 <!-- HERO -->
 <section class="hero-section" style="padding:0; margin-top:0; scroll-margin-top:0;">
   <img class="hero-img" src="./images/hero-banner.png" alt="Gaurav Saini & Associates — Advocates & Legal Consultants, New Delhi">
-  <div class="hero-overlay">
-    <div class="hero-cta-wrap">
-      <a href="#about" class="hero-cta">Discover the Firm &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-  </div>
 </section>
+
+<!-- HERO CTA BAR -->
+<div class="hero-cta-bar">
+  <a href="#about" class="hero-cta">Discover the Firm &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+</div>
 
 <!-- ABOUT -->
 <section id="about" class="reveal">
