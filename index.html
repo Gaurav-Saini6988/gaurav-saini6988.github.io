@@ -280,18 +280,14 @@ header {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(11,30,51,0.98) 0%,
-    rgba(11,30,51,0.98) 52%,
-    rgba(11,30,51,0.85) 65%,
-    rgba(11,30,51,0.30) 80%,
-    rgba(11,30,51,0.00) 100%
-  );
+  background: transparent;
   display: flex;
-  align-items: center;
-  padding: 0 56px;
-  line-height: 1.75;
+  align-items: flex-end;
+  padding: 0 0 6% 4%;
+  line-height: 1;
+}
+.hero-cta-wrap {
+  display: inline-block;
 }
 .hero-text {
   max-width: 560px;
@@ -874,10 +870,7 @@ footer {
 <section class="hero-section" style="padding:0; margin-top:0; scroll-margin-top:0;">
   <img class="hero-img" src="./images/hero-banner.png" alt="Gaurav Saini & Associates — Advocates & Legal Consultants, New Delhi">
   <div class="hero-overlay">
-    <div class="hero-text">
-      <span class="hero-tag">Advocates &amp; Legal Consultants &ndash; New Delhi</span>
-      <h2>Litigation, Corporate<br>Advisory &amp; <em>Compliance</em></h2>
-      <p>Strategic legal representation and advisory services for individuals, businesses and institutions in New Delhi.</p>
+    <div class="hero-cta-wrap">
       <a href="#about" class="hero-cta">Discover the Firm &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
