@@ -276,17 +276,16 @@ header {
   display: block;
   vertical-align: top;
 }
-/* Strong left-side gradient that fully covers the baked-in image text,
-   fading to transparent on the right so the portrait remains visible */
+/* Strong gradient covering full left+centre to hide baked-in image text */
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(11,30,51,0.97) 0%,
-    rgba(11,30,51,0.97) 38%,
-    rgba(11,30,51,0.75) 55%,
-    rgba(11,30,51,0.20) 75%,
+    rgba(11,30,51,0.98) 0%,
+    rgba(11,30,51,0.98) 52%,
+    rgba(11,30,51,0.85) 65%,
+    rgba(11,30,51,0.30) 80%,
     rgba(11,30,51,0.00) 100%
   );
   display: flex;
@@ -362,21 +361,21 @@ header {
 
 /* ─── SECTION BASE ─── */
 section {
-  padding: 60px 30px 40px;
+  padding: 40px 30px 30px;
   scroll-margin-top: 110px;
 }
 
 /* ─── SECTION HEADINGS ─── */
 .section-header {
   text-align: center;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
 }
 .section-header h2 {
   font-family: var(--serif);
   font-size: 36px;
   font-weight: 600;
   color: var(--navy);
-  margin: 0 0 14px 0;
+  margin: 0 0 10px 0;
   letter-spacing: 0.3px;
 }
 .section-header .gold-rule {
@@ -400,17 +399,17 @@ h2 {
   width: 60px;
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  margin: 0 auto 28px auto;
+  margin: 0 auto 18px auto;
 }
 
 /* ─── BODY TEXT ─── */
 section p {
   font-family: var(--body);
   font-size: 17px;
-  line-height: 1.9;
+  line-height: 1.85;
   color: #0a1824;
   max-width: 820px;
-  margin: 0 auto 18px auto;
+  margin: 0 auto 14px auto;
   text-align: justify;
 }
 
@@ -420,7 +419,7 @@ section p {
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   display: block;
   font-weight: 600;
 }
@@ -429,6 +428,7 @@ section p {
 #about {
   background: linear-gradient(135deg, #faf6ee 0%, #ffffff 60%, #f5edd8 100%);
   border-bottom: 1px solid rgba(201,162,77,0.2);
+  padding-bottom: 24px;
 }
 #about p {
   color: #0a1824;
@@ -440,6 +440,8 @@ section p {
   background: linear-gradient(160deg, #f5edd8 0%, #faf6ee 100%);
   border-top: 1px solid rgba(201,162,77,0.25);
   border-bottom: 1px solid rgba(201,162,77,0.25);
+  padding-top: 36px;
+  padding-bottom: 28px;
 }
 
 #clients {
